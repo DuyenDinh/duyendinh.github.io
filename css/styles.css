@@ -227,6 +227,11 @@ a { color: inherit; text-decoration: none; }
 .entry__list li { position: relative; padding-left: 20px; margin-bottom: 7px; color: var(--ink-soft); font-size: 15.5px; }
 .entry__list li::before { content: ""; position: absolute; left: 0; top: 10px; width: 6px; height: 6px; border-radius: 50%; background: var(--blue); }
 
+.principles { list-style: none; margin-bottom: 8px; }
+.principles li { position: relative; padding-left: 22px; margin-bottom: 12px; color: var(--ink-soft); max-width: 680px; }
+.principles li::before { content: ""; position: absolute; left: 0; top: 10px; width: 8px; height: 8px; border-radius: 50%; background: var(--blue); }
+.principles strong { color: var(--ink); }
+
 .list { list-style: none; }
 .list li { padding: 9px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 15.5px; }
 .list li:first-child { border-top: none; padding-top: 0; }

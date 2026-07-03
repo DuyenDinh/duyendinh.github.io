@@ -34,9 +34,16 @@ document.addEventListener('DOMContentLoaded', () => {
   window.addEventListener('hashchange', routeFromHash);
   routeFromHash();
 
-  // Close mobile menu when a nav item (any [data-nav]) is clicked
+  // Explicit navigation on any [data-nav] click (don't rely on native anchor jump)
   document.querySelectorAll('[data-nav]').forEach((a) =>
-    a.addEventListener('click', () => document.querySelector('.topnav').classList.remove('topnav--open'))
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href') || '';
+      if (!href.startsWith('#')) return;
+      e.preventDefault();
+      document.querySelector('.topnav').classList.remove('topnav--open');
+      if (location.hash === href) showPage(href.slice(1));
+      else location.hash = href; // triggers hashchange -> routeFromHash
+    })
   );
 
   // 2. Case study accordions
