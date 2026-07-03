@@ -31,6 +31,16 @@ Because this is a **user site**, the repo must be named exactly `DuyenDinh.githu
 3. On GitHub: **Settings → Pages**. Source should auto-detect `main` branch, `/ (root)`.
 4. Wait ~1 minute, then visit **https://duyendinh.github.io**.
 
+## Layout
+Two-column resume layout inspired by thanhphongtrang.github.io: a sticky left
+profile sidebar (avatar, name, role, bio, contact list) beside a right content
+column. The top nav switches between four client-side pages via URL hash:
+`#home`, `#portfolio`, `#cv`, `#testimonials` (all in one `index.html`).
+
+## Adding a profile photo
+Drop a square photo at `assets/img/profile.jpg`. It replaces the "DD" monogram
+avatar automatically. If missing, the monogram shows (no broken image).
+
 ## Adding app screenshots
 Drop images into `assets/img/`:
 - `seen-screenshot.png`

@@ -6,12 +6,10 @@
   <title>Duyen Dinh — Growth Product Manager</title>
   <meta name="description" content="Product Manager with 7+ years driving onboarding, retention, and monetization growth for a 500M+ user consumer app." />
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Duyen Dinh — Growth Product Manager" />
   <meta property="og:description" content="7+ years driving onboarding, retention, and monetization growth for a 500M+ user consumer app." />
   <meta property="og:type" content="website" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -20,593 +18,502 @@
 </head>
 <body>
 
-  <!-- ===================== NAV ===================== -->
-  <header class="nav" id="top">
-    <div class="nav__inner">
-      <a href="#top" class="nav__logo">Duyen<span>Dinh</span></a>
-      <nav class="nav__links" aria-label="Primary">
-        <a href="#about">About</a>
-        <a href="#work">Work</a>
-        <a href="#testimonials">Testimonials</a>
-        <a href="#toolkit">Toolkit</a>
-        <a href="#projects">Projects</a>
-        <a href="#beyond">Beyond</a>
+  <!-- ===================== TOP NAV ===================== -->
+  <header class="topnav">
+    <div class="topnav__inner">
+      <a href="#home" class="brand" data-nav>Duyen<span>Dinh</span></a>
+      <nav class="topnav__links" aria-label="Primary">
+        <a href="#home" data-nav>Home</a>
+        <a href="#portfolio" data-nav>Portfolio</a>
+        <a href="#cv" data-nav>CV</a>
+        <a href="#testimonials" data-nav>Testimonials</a>
       </nav>
-      <a class="btn btn--soft nav__cta" href="https://drive.google.com/file/d/1u_RwJXXvzhaQl2QmB7T5UFADIq1a97uq/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
-      <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <button class="topnav__toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
   </header>
 
-  <!-- ===================== HERO ===================== -->
-  <section class="hero">
-    <div class="hero__blob hero__blob--1"></div>
-    <div class="hero__blob hero__blob--2"></div>
-    <div class="hero__inner">
-      <p class="eyebrow">Growth Product Manager</p>
-      <h1 class="hero__title">I drive growth<br />that <span class="accent">scales.</span></h1>
-      <p class="hero__subhead">
-        7+ years across product and project management, driving onboarding,
-        retention, and monetization growth for a 500M+ user global consumer app.
-        I build growth systems through data-driven experimentation, not guesswork.
-      </p>
-      <div class="hero__cta">
-        <a class="btn btn--primary" href="#work">View My Work</a>
-        <a class="btn btn--ghost" href="#about">Learn More</a>
-      </div>
-      <p class="hero__contact">
-        Stockholm, Sweden
-        <span>·</span>
-        <a href="mailto:myduyen28ftu2@gmail.com">Email</a>
-        <span>·</span>
-        <a href="https://www.linkedin.com/in/duyen-dinh-dtmd/" target="_blank" rel="noopener">LinkedIn</a>
-        <span>·</span>
-        <a href="https://github.com/DuyenDinh" target="_blank" rel="noopener">GitHub</a>
-        <span>·</span>
-        <a href="https://drive.google.com/file/d/1u_RwJXXvzhaQl2QmB7T5UFADIq1a97uq/view?usp=sharing" target="_blank" rel="noopener">Resume</a>
-      </p>
-    </div>
-  </section>
+  <!-- ===================== LAYOUT ===================== -->
+  <div class="layout">
 
-  <!-- ===================== ABOUT ===================== -->
-  <section class="section about" id="about">
-    <div class="wrap about__grid">
-      <div class="about__text">
-        <p class="eyebrow">About Me</p>
-        <h2 class="section__title">Data-driven,<br />user-obsessed.</h2>
-        <p>
-          I'm a Growth Product Manager with 7+ years of experience across product
-          and project management, currently driving onboarding, activation,
-          retention, and monetization for Truecaller, a top-1 Caller ID and spam
-          protection app with 500M+ users worldwide. I work at the intersection of
-          data and user empathy: every feature I ship starts with a hypothesis
-          grounded in real user behavior (support tickets, reviews, funnel data),
-          gets validated fast with lightweight tests, and scales only once the
-          data backs it up.
+    <!-- ---------- LEFT SIDEBAR ---------- -->
+    <aside class="sidebar">
+      <div class="avatar">
+        <img src="assets/img/profile.jpg" alt="Duyen Dinh"
+             onerror="this.closest('.avatar').classList.add('avatar--empty')" />
+        <span class="avatar__mono">DD</span>
+      </div>
+      <h1 class="sidebar__name">Duyen Dinh</h1>
+      <p class="sidebar__role">Growth Product Manager</p>
+      <p class="sidebar__bio">
+        7+ years driving onboarding, retention, and monetization for Truecaller,
+        a 500M+ user app. Data-driven, user-obsessed. I build growth systems
+        through experimentation, not guesswork.
+      </p>
+
+      <ul class="contact">
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Stockholm, Sweden</span>
+        </li>
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path></svg>
+          <span>Truecaller</span>
+        </li>
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          <a href="mailto:myduyen28ftu2@gmail.com">myduyen28ftu2@gmail.com</a>
+        </li>
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+          <a href="https://www.linkedin.com/in/duyen-dinh-dtmd/" target="_blank" rel="noopener">LinkedIn</a>
+        </li>
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          <a href="https://github.com/DuyenDinh" target="_blank" rel="noopener">GitHub</a>
+        </li>
+        <li>
+          <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+          <a href="https://drive.google.com/file/d/1u_RwJXXvzhaQl2QmB7T5UFADIq1a97uq/view?usp=sharing" target="_blank" rel="noopener">Resume (PDF)</a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- ---------- RIGHT MAIN ---------- -->
+    <main class="main">
+
+      <!-- ============ HOME ============ -->
+      <section class="page" id="home">
+        <h2 class="page__title">Hi, I'm Duyen 👋</h2>
+        <p class="lead">
+          I'm a Growth Product Manager with 7+ years across product and project
+          management, currently driving onboarding, activation, retention, and
+          monetization for Truecaller, a top-1 Caller ID and spam protection app
+          with 500M+ users worldwide.
         </p>
-        <p>
-          Before product, I led business development and project delivery for
-          foreign investment projects in Vietnam, coordinating legal, facilities,
-          and commercial teams to deliver 100+ properties on schedule, which is
-          where the cross-functional coordination muscle I use today comes from.
+        <p class="body">
+          I work at the intersection of data and user empathy: every feature I
+          ship starts with a hypothesis grounded in real user behavior (support
+          tickets, reviews, funnel data), gets validated fast with lightweight
+          tests, and scales only once the data backs it up. Before product, I led
+          business development and project delivery for foreign investment
+          projects in Vietnam, which is where the cross-functional coordination
+          muscle I use today comes from.
         </p>
-      </div>
-      <div class="about__stats">
-        <div class="stat">
-          <span class="stat__num">7+</span>
-          <span class="stat__label">Years Experience</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">500M+</span>
-          <span class="stat__label">Users Impacted</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">+72%</span>
-          <span class="stat__label">Peak Premium Conversion Uplift</span>
-        </div>
-        <div class="stat">
-          <span class="stat__num">92%</span>
-          <span class="stat__label">App Upgrade Success (41M+ users)</span>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===================== CASE STUDIES ===================== -->
-  <section class="section work" id="work">
-    <div class="wrap">
-      <p class="eyebrow">Selected Work</p>
-      <h2 class="section__title">Case studies in growth.</h2>
-      <p class="section__lead">
-        Each one follows the same arc: a hypothesis grounded in real user
-        behavior, a fast validation step, then a measured result.
-      </p>
+        <div class="stats">
+          <div class="stat"><span class="stat__num">7+</span><span class="stat__label">Years Experience</span></div>
+          <div class="stat"><span class="stat__num">500M+</span><span class="stat__label">Users Impacted</span></div>
+          <div class="stat"><span class="stat__num">+72%</span><span class="stat__label">Peak Premium Uplift</span></div>
+          <div class="stat"><span class="stat__num">92%</span><span class="stat__label">App Upgrade (41M+ users)</span></div>
+        </div>
 
-      <div class="cases">
+        <h3 class="subhead">Explore</h3>
+        <p class="body">
+          Take a look at my <a href="#portfolio" data-nav>product portfolio</a>,
+          read my full <a href="#cv" data-nav>CV</a>, or see what colleagues say
+          in <a href="#testimonials" data-nav>testimonials</a>. Open to new
+          opportunities and conversations about growth, product strategy, and
+          building experiences that scale.
+        </p>
+      </section>
 
-        <!-- Case 1 -->
-        <article class="case">
-          <div class="case__head">
-            <div class="case__meta">
-              <div class="tags">
-                <span class="tag">Monetization</span>
-                <span class="tag">Onboarding</span>
-                <span class="tag">User Research</span>
+      <!-- ============ PORTFOLIO ============ -->
+      <section class="page" id="portfolio">
+        <h2 class="page__title">Product Portfolio</h2>
+        <p class="lead">
+          Seven case studies from Truecaller. Each follows the same arc: a
+          hypothesis grounded in real user behavior, a fast validation step, then
+          a measured result. Click any one to read the full story.
+        </p>
+
+        <div class="cases">
+
+          <!-- Case 1 -->
+          <article class="case">
+            <div class="case__head">
+              <div class="case__meta">
+                <div class="tags"><span class="tag">Monetization</span><span class="tag">Onboarding</span><span class="tag">User Research</span></div>
+                <h3 class="case__title">Block Settings Onboarding Screen</h3>
+                <p class="case__tagline">Turning a support complaint into a monetization win</p>
               </div>
-              <h3 class="case__title">Block Settings Onboarding Screen</h3>
-              <p class="case__tagline">Turning a support complaint into a monetization win</p>
+              <div class="case__metric"><span class="case__metric-num">+72%</span><span class="case__metric-label">Premium Purchase</span></div>
             </div>
-            <div class="case__metric">
-              <span class="case__metric-num">+72%</span>
-              <span class="case__metric-label">Premium Purchase</span>
-            </div>
-          </div>
-          <button class="case__toggle" aria-expanded="false">Read full case study</button>
-          <div class="case__body" hidden>
-            <div class="story">
-              <h4>Situation</h4>
-              <p>Users were leaving negative reviews saying Truecaller wasn't blocking unwanted spam calls, even though the feature existed. Data showed the root cause: block/protection settings were off by default, and in usability testing, 9 out of 9 users could not find how to turn auto-block on.</p>
-              <h4>Task</h4>
-              <p>Improve the block-activation experience to increase both premium purchase and user satisfaction.</p>
-              <h4>Actions</h4>
-              <ul>
-                <li>Read through user reviews and support tickets to understand the exact language users used to describe the frustration.</li>
-                <li>Ran UX research (9 test users) confirming the setting was undiscoverable.</li>
-                <li>Designed a single, dedicated onboarding screen that clearly showed the value of blocking and walked users through turning it on, keeping the design deliberately simple and benefit-focused.</li>
-                <li>Iterated the copy and layout based on UX research findings before wide rollout.</li>
-              </ul>
-              <h4>Results</h4>
-              <ul>
-                <li><strong>+72% increase in premium purchase</strong>, the new screen replaced the existing premium screen worldwide.</li>
-                <li>The concept was replicated to rebuild the broader in-app block experience.</li>
-                <li>Directly nominated by manager as a standout achievement for user-first thinking.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Case 2 -->
-        <article class="case">
-          <div class="case__head">
-            <div class="case__meta">
-              <div class="tags">
-                <span class="tag">Monetization</span>
-                <span class="tag">Onboarding</span>
-                <span class="tag">Experimentation</span>
+            <button class="case__toggle" aria-expanded="false">Read full case study</button>
+            <div class="case__body" hidden>
+              <div class="story">
+                <h4>Situation</h4>
+                <p>Users were leaving negative reviews saying Truecaller wasn't blocking unwanted spam calls, even though the feature existed. Data showed the root cause: block/protection settings were off by default, and in usability testing, 9 out of 9 users could not find how to turn auto-block on.</p>
+                <h4>Task</h4>
+                <p>Improve the block-activation experience to increase both premium purchase and user satisfaction.</p>
+                <h4>Actions</h4>
+                <ul>
+                  <li>Read through user reviews and support tickets to understand the exact language users used to describe the frustration.</li>
+                  <li>Ran UX research (9 test users) confirming the setting was undiscoverable.</li>
+                  <li>Designed a single, dedicated onboarding screen that clearly showed the value of blocking and walked users through turning it on, kept deliberately simple and benefit-focused.</li>
+                  <li>Iterated the copy and layout based on UX research findings before wide rollout.</li>
+                </ul>
+                <h4>Results</h4>
+                <ul>
+                  <li><strong>+72% increase in premium purchase</strong>, the new screen replaced the existing premium screen worldwide.</li>
+                  <li>The concept was replicated to rebuild the broader in-app block experience.</li>
+                  <li>Directly nominated by manager as a standout achievement for user-first thinking.</li>
+                </ul>
               </div>
-              <h3 class="case__title">Premium Choice Onboarding Screen</h3>
-              <p class="case__tagline">Finding a monetization win inside someone else's feature territory</p>
             </div>
-            <div class="case__metric">
-              <span class="case__metric-num">+30%</span>
-              <span class="case__metric-label">Premium Purchase · 0% registration impact</span>
-            </div>
-          </div>
-          <button class="case__toggle" aria-expanded="false">Read full case study</button>
-          <div class="case__body" hidden>
-            <div class="story">
-              <h4>Situation</h4>
-              <p>The growth team needed to increase premium subscriptions, but most premium-related features were owned by a dedicated Premium team, leaving limited room to act quickly within the growth team's own scope.</p>
-              <h4>Task</h4>
-              <p>Find a monetization win inside the onboarding/first-week experience the growth team already owned, without hurting the metric growth is measured on: registration rate.</p>
-              <h4>Actions</h4>
-              <ul>
-                <li>Investigated where premium value could be surfaced earlier, inside the existing onboarding flow.</li>
-                <li>Added a single new screen explaining the difference between paid and free tiers in plain language, addressing directly why users see ads.</li>
-                <li>Explicitly tested and confirmed the new screen would not reduce registration completion before scaling.</li>
-              </ul>
-              <h4>Results</h4>
-              <ul>
-                <li><strong>+30% increase in premium purchase.</strong></li>
-                <li><strong>Zero impact on registration rate</strong>, proving a single well-placed screen can drive monetization without hurting top-of-funnel conversion.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Case 3 -->
-        <article class="case">
-          <div class="case__head">
-            <div class="case__meta">
-              <div class="tags">
-                <span class="tag">Funnel Optimization</span>
-                <span class="tag">UX</span>
-                <span class="tag">Global</span>
+          <!-- Case 2 -->
+          <article class="case">
+            <div class="case__head">
+              <div class="case__meta">
+                <div class="tags"><span class="tag">Monetization</span><span class="tag">Onboarding</span><span class="tag">Experimentation</span></div>
+                <h3 class="case__title">Premium Choice Onboarding Screen</h3>
+                <p class="case__tagline">Finding a monetization win inside someone else's feature territory</p>
               </div>
-              <h3 class="case__title">Onboarding Funnel Optimization</h3>
-              <p class="case__tagline">Fixing the "leaking bucket"</p>
+              <div class="case__metric"><span class="case__metric-num">+30%</span><span class="case__metric-label">Premium · 0% reg. impact</span></div>
             </div>
-            <div class="case__metric">
-              <span class="case__metric-num">+20%</span>
-              <span class="case__metric-label">Registration Rate (worldwide)</span>
-            </div>
-          </div>
-          <button class="case__toggle" aria-expanded="false">Read full case study</button>
-          <div class="case__body" hidden>
-            <div class="story">
-              <h4>Situation</h4>
-              <p>The onboarding flow behaved like a leaking bucket. Even small drop-offs at the very start of the funnel compounded into significant user loss by the time registration completed, and drop-off rates varied hugely by market.</p>
-              <h4>Task</h4>
-              <p>Establish a continuous-improvement cycle for worldwide registration rate.</p>
-              <h4>Actions</h4>
-              <ul>
-                <li>Partnered with data analysts to run funnel analysis, pinpointing the two highest drop-off screens.</li>
-                <li>Simplified the UI on those screens to cut cognitive load, and added a confirmation prompt to catch accidental exits.</li>
-                <li>Audited the permission-request screen and moved non-essential permission prompts to after core registration instead of before.</li>
-                <li>Built a fast-track path for returning users to skip redundant steps entirely.</li>
-                <li>Deferred 4 non-mandatory onboarding steps to post-registration days.</li>
-                <li>Localized registration steps and verification methods specifically for focus growth markets.</li>
-              </ul>
-              <h4>Results</h4>
-              <ul>
-                <li><strong>+20% improvement in registration rate worldwide.</strong></li>
-                <li>Funnel moved into a stable maintenance mode after the optimization cycle closed.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Case 4 -->
-        <article class="case">
-          <div class="case__head">
-            <div class="case__meta">
-              <div class="tags">
-                <span class="tag">Retention</span>
-                <span class="tag">Lifecycle</span>
-                <span class="tag">CRM</span>
-                <span class="tag">Creative</span>
+            <button class="case__toggle" aria-expanded="false">Read full case study</button>
+            <div class="case__body" hidden>
+              <div class="story">
+                <h4>Situation</h4>
+                <p>The growth team needed to increase premium subscriptions, but most premium-related features were owned by a dedicated Premium team, leaving limited room to act quickly within the growth team's own scope.</p>
+                <h4>Task</h4>
+                <p>Find a monetization win inside the onboarding/first-week experience the growth team already owned, without hurting the metric growth is measured on: registration rate.</p>
+                <h4>Actions</h4>
+                <ul>
+                  <li>Investigated where premium value could be surfaced earlier, inside the existing onboarding flow.</li>
+                  <li>Added a single new screen explaining the difference between paid and free tiers in plain language, addressing directly why users see ads.</li>
+                  <li>Explicitly tested and confirmed the new screen would not reduce registration completion before scaling.</li>
+                </ul>
+                <h4>Results</h4>
+                <ul>
+                  <li><strong>+30% increase in premium purchase.</strong></li>
+                  <li><strong>Zero impact on registration rate</strong>, proving a single well-placed screen can drive monetization without hurting top-of-funnel conversion.</li>
+                </ul>
               </div>
-              <h3 class="case__title">Day 1 Push Notification</h3>
-              <p class="case__tagline">Mirroring the user's own words back to them</p>
             </div>
-            <div class="case__metric">
-              <span class="case__metric-num">10%</span>
-              <span class="case__metric-label">CTR · highest ever recorded</span>
-            </div>
-          </div>
-          <button class="case__toggle" aria-expanded="false">Read full case study</button>
-          <div class="case__body" hidden>
-            <div class="story">
-              <h4>Situation</h4>
-              <p>Users in growth markets (e.g. Colombia, Nigeria) were leaving negative reviews saying Truecaller wasn't blocking unwanted calls, the same root cause as the block-settings case: blocking settings off by default, undiscovered by new users. This one needed a lifecycle/comms fix, not just a UI fix.</p>
-              <h4>Task</h4>
-              <p>Educate new users about blocking settings, at the right moment, in a way that would actually get opened.</p>
-              <h4>Actions</h4>
-              <ul>
-                <li>Instead of writing generic marketing copy, pulled the exact phrases users had used in their negative reviews and used that language directly in the push notification copy.</li>
-                <li>Designed the message to land on Day 1, timed to when the frustration was most likely to be fresh.</li>
-                <li>A/B tested against standard onboarding push copy.</li>
-              </ul>
-              <h4>Results</h4>
-              <ul>
-                <li><strong>10% click-through rate, a record high</strong> for any push campaign at Truecaller.</li>
-                <li>Measurable lift in D1/D7 retention.</li>
-                <li>Significant reduction in negative reviews mentioning blocking.</li>
-                <li>Insight directly informed the design of the block-settings onboarding screen.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Case 5 -->
-        <article class="case">
-          <div class="case__head">
-            <div class="case__meta">
-              <div class="tags">
-                <span class="tag">Retention</span>
-                <span class="tag">Lifecycle</span>
-                <span class="tag">Localization</span>
+          <!-- Case 3 -->
+          <article class="case">
+            <div class="case__head">
+              <div class="case__meta">
+                <div class="tags"><span class="tag">Funnel Optimization</span><span class="tag">UX</span><span class="tag">Global</span></div>
+                <h3 class="case__title">Onboarding Funnel Optimization</h3>
+                <p class="case__tagline">Fixing the "leaking bucket"</p>
               </div>
-              <h3 class="case__title">7-Day New User Retention Experience</h3>
-              <p class="case__tagline">Bridging the activation gap</p>
+              <div class="case__metric"><span class="case__metric-num">+20%</span><span class="case__metric-label">Registration Rate</span></div>
             </div>
-            <div class="case__metric">
-              <span class="case__metric-num">+15pp</span>
-              <span class="case__metric-label">Day-7 Retention (cumulative, 3 yrs)</span>
-            </div>
-          </div>
-          <button class="case__toggle" aria-expanded="false">Read full case study</button>
-          <div class="case__body" hidden>
-            <div class="story">
-              <h4>Situation</h4>
-              <p>Even among users who completed registration, there was a significant activation gap. Many registered and then went inactive. Industry benchmarks and internal data both pointed to Day-7 retention as the leading indicator of long-term stickiness.</p>
-              <h4>Task</h4>
-              <p>Increase Day-7 retention as a core team KPI.</p>
-              <h4>Actions</h4>
-              <ul>
-                <li>Designed and launched an automated push notification sequence spanning the first week, progressively introducing core features rather than dumping everything on Day 1.</li>
-                <li>Integrated bite-sized in-product tutorials triggered right after registration to help users configure protection settings.</li>
-                <li>Localized language and imagery for focus markets to increase trust and cultural relevance.</li>
-              </ul>
-              <h4>Results</h4>
-              <ul>
-                <li><strong>+15 percentage points cumulative improvement in Day-7 retention</strong>, compounded over 3 years of iteration.</li>
-                <li>Established a lasting framework where the user journey continues well past registration, instead of ending at signup.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
-
-        <!-- Case 6 -->
-        <article class="case">
-          <div class="case__head">
-            <div class="case__meta">
-              <div class="tags">
-                <span class="tag">Leadership</span>
-                <span class="tag">Cross-functional</span>
-                <span class="tag">Compliance</span>
-                <span class="tag">Trade-off Analysis</span>
+            <button class="case__toggle" aria-expanded="false">Read full case study</button>
+            <div class="case__body" hidden>
+              <div class="story">
+                <h4>Situation</h4>
+                <p>The onboarding flow behaved like a leaking bucket. Even small drop-offs at the very start of the funnel compounded into significant user loss by the time registration completed, and drop-off rates varied hugely by market.</p>
+                <h4>Task</h4>
+                <p>Establish a continuous-improvement cycle for worldwide registration rate.</p>
+                <h4>Actions</h4>
+                <ul>
+                  <li>Partnered with data analysts to run funnel analysis, pinpointing the two highest drop-off screens.</li>
+                  <li>Simplified the UI on those screens to cut cognitive load, and added a confirmation prompt to catch accidental exits.</li>
+                  <li>Audited the permission-request screen and moved non-essential prompts to after core registration instead of before.</li>
+                  <li>Built a fast-track path for returning users, and deferred 4 non-mandatory onboarding steps to post-registration days.</li>
+                  <li>Localized registration steps and verification methods specifically for focus growth markets.</li>
+                </ul>
+                <h4>Results</h4>
+                <ul>
+                  <li><strong>+20% improvement in registration rate worldwide.</strong></li>
+                  <li>Funnel moved into a stable maintenance mode after the optimization cycle closed.</li>
+                </ul>
               </div>
-              <h3 class="case__title">App Upgrade Project (≥14.26)</h3>
-              <p class="case__tagline">Getting 41M users to move, with 8+ teams aligned</p>
             </div>
-            <div class="case__metric">
-              <span class="case__metric-num">92%</span>
-              <span class="case__metric-label">Upgrade Rate (target 90%) · 41M+ users</span>
-            </div>
-          </div>
-          <button class="case__toggle" aria-expanded="false">Read full case study</button>
-          <div class="case__body" hidden>
-            <div class="story">
-              <h4>Situation</h4>
-              <p>For legal and messaging-compliance reasons, Truecaller needed 90%+ of its active user base on app version 14.26 or above. At the start of the project, ~13.4% of users (41M+ people) were still below that version, and standard push nudges were converting at only 0.1%.</p>
-              <h4>Task</h4>
-              <p>Lead the project to close the gap and hit the 90% target.</p>
-              <h4>Actions</h4>
-              <ul>
-                <li>Collaborated with the Release team on a phased Google Play rollout strategy.</li>
-                <li>Partnered with CRM and Brand teams on upgrade push notifications and MassIM campaigns.</li>
-                <li>Tracked upgrade rate and uninstall rate weekly across the full rollout.</li>
-                <li>Investigated a stuck cohort of 1.8M users on a "preload" build who weren't responding to nudges at all. Traced the root cause to nudge logic checking the Play Store version instead of the actual device build version, found it was concentrated on Vivo devices, and worked with the Release team to enable a legacy prompt specifically for that cohort, recovering ~40% of that stuck group.</li>
-                <li>Faced with the 0.1% soft-nudge conversion rate, ran a trade-off analysis estimating a hard (mandatory) upgrade would convert ~40% of remaining users per version at a cost of ~5% net uninstall, and presented this explicitly to stakeholders as a business trade-off (short-term user loss vs. long-term compliance and revenue) to get sign-off.</li>
-              </ul>
-              <h4>Results</h4>
-              <ul>
-                <li><strong>Closed the project at 92% upgrade rate</strong>, beating the 90% target, across 41M+ users.</li>
-                <li>Documented lessons learned into a reusable framework for future upgrade projects.</li>
-                <li>Ran this largely independently while direct manager was on leave for 6 months; manager noted on return that key hypotheses had "already been validated with data" before being raised.</li>
-              </ul>
-            </div>
-          </div>
-        </article>
+          </article>
 
-        <!-- Case 7 -->
-        <article class="case">
-          <div class="case__head">
-            <div class="case__meta">
-              <div class="tags">
-                <span class="tag">Data Investigation</span>
-                <span class="tag">Analytics</span>
-                <span class="tag">Problem Solving</span>
+          <!-- Case 4 -->
+          <article class="case">
+            <div class="case__head">
+              <div class="case__meta">
+                <div class="tags"><span class="tag">Retention</span><span class="tag">Lifecycle</span><span class="tag">CRM</span><span class="tag">Creative</span></div>
+                <h3 class="case__title">Day 1 Push Notification</h3>
+                <p class="case__tagline">Mirroring the user's own words back to them</p>
               </div>
-              <h3 class="case__title">Root-Cause Investigation: The Frozen App Version</h3>
-              <p class="case__tagline">Why were 40,000 users a day still downloading a version from a year ago?</p>
+              <div class="case__metric"><span class="case__metric-num">10%</span><span class="case__metric-label">CTR · record high</span></div>
             </div>
-            <div class="case__metric">
-              <span class="case__metric-num">Root cause</span>
-              <span class="case__metric-label">Systemic fix, not a one-off patch</span>
+            <button class="case__toggle" aria-expanded="false">Read full case study</button>
+            <div class="case__body" hidden>
+              <div class="story">
+                <h4>Situation</h4>
+                <p>Users in growth markets (e.g. Colombia, Nigeria) were leaving negative reviews saying Truecaller wasn't blocking unwanted calls, the same root cause as the block-settings case: blocking settings off by default, undiscovered by new users. This one needed a lifecycle/comms fix, not just a UI fix.</p>
+                <h4>Task</h4>
+                <p>Educate new users about blocking settings, at the right moment, in a way that would actually get opened.</p>
+                <h4>Actions</h4>
+                <ul>
+                  <li>Instead of writing generic marketing copy, pulled the exact phrases users had used in their negative reviews and used that language directly in the push notification copy.</li>
+                  <li>Designed the message to land on Day 1, timed to when the frustration was most likely to be fresh.</li>
+                  <li>A/B tested against standard onboarding push copy.</li>
+                </ul>
+                <h4>Results</h4>
+                <ul>
+                  <li><strong>10% click-through rate, a record high</strong> for any push campaign at Truecaller.</li>
+                  <li>Measurable lift in D1/D7 retention and a significant reduction in negative reviews mentioning blocking.</li>
+                  <li>Insight directly informed the design of the block-settings onboarding screen.</li>
+                </ul>
+              </div>
             </div>
-          </div>
-          <button class="case__toggle" aria-expanded="false">Read full case study</button>
-          <div class="case__body" hidden>
-            <div class="story">
-              <h4>Situation</h4>
-              <p>Noticed a persistent, non-decaying pattern: roughly 40,000 users per day were newly installing app version 13.34, over a year old, well after multiple newer versions had shipped. This blocked a newer verification method (WhatsApp/ROTP) for those users and was quietly driving up cost and crash rates.</p>
-              <h4>Task</h4>
-              <p>Find out why users kept landing on a version that old, since a normal "old version tail" should decay over time, not stay flat.</p>
-              <h4>Actions</h4>
-              <ul>
-                <li>Confirmed the pattern was concentrated in specific countries and devices, not randomly distributed.</li>
-                <li>Noted the flat (non-decaying) shape of the trend, which ruled out an ordinary long-tail explanation.</li>
-                <li>Traced install sources and found 85% came via APK, not the Play Store.</li>
-                <li>Looped in the web team to check APK distribution and the release team to check if anything was unusual about the 13.34 build specifically.</li>
-                <li>Root cause: device partners (Transsion/Infinix) in Nigeria had bundled 13.34, the version from a prior brand-refresh campaign, into their devices and simply never updated the bundled APK.</li>
-              </ul>
-              <h4>Results</h4>
-              <ul>
-                <li>Routed the fix to the User Acquisition team to work directly with the device partner on updating their bundled build.</li>
-                <li>Established a longer-term monitoring framework to catch this class of issue earlier next time, rather than relying on someone noticing it by chance.</li>
-              </ul>
+          </article>
+
+          <!-- Case 5 -->
+          <article class="case">
+            <div class="case__head">
+              <div class="case__meta">
+                <div class="tags"><span class="tag">Retention</span><span class="tag">Lifecycle</span><span class="tag">Localization</span></div>
+                <h3 class="case__title">7-Day New User Retention Experience</h3>
+                <p class="case__tagline">Bridging the activation gap</p>
+              </div>
+              <div class="case__metric"><span class="case__metric-num">+15pp</span><span class="case__metric-label">Day-7 Retention (3 yrs)</span></div>
             </div>
-          </div>
-        </article>
+            <button class="case__toggle" aria-expanded="false">Read full case study</button>
+            <div class="case__body" hidden>
+              <div class="story">
+                <h4>Situation</h4>
+                <p>Even among users who completed registration, there was a significant activation gap. Many registered and then went inactive. Industry benchmarks and internal data both pointed to Day-7 retention as the leading indicator of long-term stickiness.</p>
+                <h4>Task</h4>
+                <p>Increase Day-7 retention as a core team KPI.</p>
+                <h4>Actions</h4>
+                <ul>
+                  <li>Designed and launched an automated push notification sequence spanning the first week, progressively introducing core features rather than dumping everything on Day 1.</li>
+                  <li>Integrated bite-sized in-product tutorials triggered right after registration to help users configure protection settings.</li>
+                  <li>Localized language and imagery for focus markets to increase trust and cultural relevance.</li>
+                </ul>
+                <h4>Results</h4>
+                <ul>
+                  <li><strong>+15 percentage points cumulative improvement in Day-7 retention</strong>, compounded over 3 years of iteration.</li>
+                  <li>Established a lasting framework where the user journey continues well past registration, instead of ending at signup.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-      </div>
-    </div>
-  </section>
+          <!-- Case 6 -->
+          <article class="case">
+            <div class="case__head">
+              <div class="case__meta">
+                <div class="tags"><span class="tag">Leadership</span><span class="tag">Cross-functional</span><span class="tag">Compliance</span></div>
+                <h3 class="case__title">App Upgrade Project (≥14.26)</h3>
+                <p class="case__tagline">Getting 41M users to move, with 8+ teams aligned</p>
+              </div>
+              <div class="case__metric"><span class="case__metric-num">92%</span><span class="case__metric-label">Upgrade Rate · 41M+ users</span></div>
+            </div>
+            <button class="case__toggle" aria-expanded="false">Read full case study</button>
+            <div class="case__body" hidden>
+              <div class="story">
+                <h4>Situation</h4>
+                <p>For legal and messaging-compliance reasons, Truecaller needed 90%+ of its active user base on app version 14.26 or above. At the start, ~13.4% of users (41M+ people) were still below that version, and standard push nudges were converting at only 0.1%.</p>
+                <h4>Task</h4>
+                <p>Lead the project to close the gap and hit the 90% target.</p>
+                <h4>Actions</h4>
+                <ul>
+                  <li>Collaborated with the Release team on a phased Google Play rollout strategy, and partnered with CRM and Brand on upgrade push and MassIM campaigns.</li>
+                  <li>Tracked upgrade rate and uninstall rate weekly across the full rollout.</li>
+                  <li>Investigated a stuck cohort of 1.8M users on a "preload" build. Traced the root cause to nudge logic checking the Play Store version instead of the device build version, concentrated on Vivo devices, and enabled a legacy prompt for that cohort, recovering ~40% of the stuck group.</li>
+                  <li>Ran a trade-off analysis on a hard (mandatory) upgrade (~40% conversion per version vs. ~5% net uninstall) and presented it to stakeholders as an explicit business trade-off to get sign-off.</li>
+                </ul>
+                <h4>Results</h4>
+                <ul>
+                  <li><strong>Closed the project at 92% upgrade rate</strong>, beating the 90% target, across 41M+ users.</li>
+                  <li>Documented lessons learned into a reusable framework for future upgrade projects.</li>
+                  <li>Ran this largely independently while direct manager was on leave for 6 months.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-  <!-- ===================== TESTIMONIALS ===================== -->
-  <section class="section testimonials" id="testimonials">
-    <div class="wrap">
-      <p class="eyebrow">Kind Words</p>
-      <h2 class="section__title">What people say.</h2>
-      <div class="quotes">
-        <figure class="quote">
-          <blockquote>"Duyen is a highly committed and motivated professional with a meticulous approach and a strong drive to get things done. She demonstrates exceptional perseverance. She is now thinking several steps ahead, demonstrating proactive problem-solving."</blockquote>
-          <figcaption><strong>Supreeth, Manager</strong> — 2024 Annual Review (rated Exceeding Expectations; promoted to L2)</figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>"Duyen's persistence, creativity, and user-first thinking had a clear and measurable impact. This work truly stands out and deserves recognition."</blockquote>
-          <figcaption><strong>Manager nomination</strong> — for the Day 1 push notification project</figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>"Exceptionally talented, dedicated, well-organized, and proactive. Clearly on track (and beyond) for the next promotion level."</blockquote>
-          <figcaption><strong>Peer Review</strong> — 2024</figcaption>
-        </figure>
-        <figure class="quote">
-          <blockquote>"Methodical approach to problem solving. Always willing to raise her hand to figure out why something is not working."</blockquote>
-          <figcaption><strong>Peer Review</strong> — 2024</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
+          <!-- Case 7 -->
+          <article class="case">
+            <div class="case__head">
+              <div class="case__meta">
+                <div class="tags"><span class="tag">Data Investigation</span><span class="tag">Analytics</span><span class="tag">Problem Solving</span></div>
+                <h3 class="case__title">Root-Cause Investigation: The Frozen App Version</h3>
+                <p class="case__tagline">Why were 40,000 users a day still downloading a version from a year ago?</p>
+              </div>
+              <div class="case__metric"><span class="case__metric-num">Root cause</span><span class="case__metric-label">Systemic fix</span></div>
+            </div>
+            <button class="case__toggle" aria-expanded="false">Read full case study</button>
+            <div class="case__body" hidden>
+              <div class="story">
+                <h4>Situation</h4>
+                <p>Noticed a persistent, non-decaying pattern: roughly 40,000 users per day were newly installing app version 13.34, over a year old, well after multiple newer versions had shipped. This blocked a newer verification method (WhatsApp/ROTP) and was quietly driving up cost and crash rates.</p>
+                <h4>Task</h4>
+                <p>Find out why users kept landing on a version that old, since a normal "old version tail" should decay over time, not stay flat.</p>
+                <h4>Actions</h4>
+                <ul>
+                  <li>Confirmed the pattern was concentrated in specific countries and devices, not randomly distributed, and noted the flat (non-decaying) shape that ruled out an ordinary long-tail explanation.</li>
+                  <li>Traced install sources and found 85% came via APK, not the Play Store.</li>
+                  <li>Looped in the web team on APK distribution and the release team on the 13.34 build specifically.</li>
+                  <li>Root cause: device partners (Transsion/Infinix) in Nigeria had bundled 13.34 from a prior brand-refresh campaign into their devices and never updated the bundled APK.</li>
+                </ul>
+                <h4>Results</h4>
+                <ul>
+                  <li>Routed the fix to the User Acquisition team to work directly with the device partner on updating their bundled build.</li>
+                  <li>Established a longer-term monitoring framework to catch this class of issue earlier next time.</li>
+                </ul>
+              </div>
+            </div>
+          </article>
 
-  <!-- ===================== TOOLKIT ===================== -->
-  <section class="section toolkit" id="toolkit">
-    <div class="wrap">
-      <p class="eyebrow">Growth PM Toolkit</p>
-      <h2 class="section__title">What I'm best at.</h2>
-      <div class="skills">
-        <div class="skill">
-          <h3>Funnel Optimization</h3>
-          <p>End-to-end optimization from onboarding and activation through retention to monetization.</p>
         </div>
-        <div class="skill">
-          <h3>Growth Hacking & Experimentation</h3>
-          <p>Problem investigation, hypothesis generation, and rigorous A/B test roadmaps, run via Confidence (internal AB testing tool), Firebase, and Clevertap.</p>
-        </div>
-        <div class="skill">
-          <h3>Global Market Localization</h3>
-          <p>Hands-on experience localizing across India, Nigeria, Colombia, Kenya, South Africa, Ethiopia, Malaysia, Indonesia, LATAM, EU, and Arabic-speaking markets.</p>
-        </div>
-        <div class="skill">
-          <h3>Analytics & Data Investigation</h3>
-          <p>SQL/BigQuery, Looker Studio, Validio. Comfortable going from a symptom to a root cause without hand-holding.</p>
-        </div>
-        <div class="skill">
-          <h3>Cross-functional Leadership</h3>
-          <p>Regularly coordinates across 8+ teams: Design, Analytics, CRM, Release, Identity, Premium, QA, Legal, and Brand.</p>
-        </div>
-        <div class="skill">
-          <h3>Storytelling & Reporting</h3>
-          <p>Weekly PPP reports, monthly board reports, quarterly health-check presentations to leadership.</p>
-        </div>
-        <div class="skill">
-          <h3>Creative AI & Rapid Prototyping</h3>
-          <p>Uses AI tools (including Claude) to accelerate research and analysis, integrated into the AB testing workflow for faster hypothesis-to-launch cycles.</p>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- ===================== SIDE PROJECTS ===================== -->
-  <section class="section projects" id="projects">
-    <div class="wrap">
-      <p class="eyebrow">Built on the Side</p>
-      <h2 class="section__title">Apps I shipped for fun.</h2>
-      <p class="section__lead">
-        Nights-and-weekends products, taken all the way from idea to the App Store.
-        Where I get to be the PM, the designer, and the builder.
-      </p>
+        <!-- Side projects -->
+        <h2 class="page__title page__title--mt">Side Projects</h2>
+        <p class="lead">
+          Nights-and-weekends products, taken from idea to the App Store. Where I
+          get to be the PM, the designer, and the builder.
+        </p>
+        <div class="apps">
+          <article class="app">
+            <div class="app__shot">
+              <img src="assets/img/seen-screenshot.png" alt="Seen app screenshot" onerror="this.closest('.app__shot').classList.add('app__shot--empty')" />
+              <div class="app__shot-fallback">Seen</div>
+            </div>
+            <div class="app__info">
+              <h3 class="app__name">Seen</h3>
+              <p class="app__tag">Goal &amp; streak tracker for your lock screen</p>
+              <p class="app__desc">A native iOS app built on the idea that "what gets seen gets done." Seen surfaces your goals and streaks right on your lock screen. SwiftUI and SwiftData, no paywall, no ads.</p>
+              <a class="btn btn--primary btn--sm app__link" href="#" data-app-link="seen">View on App Store</a>
+            </div>
+          </article>
+          <article class="app">
+            <div class="app__shot">
+              <img src="assets/img/lexiscan-screenshot.png" alt="Lexi Scan app screenshot" onerror="this.closest('.app__shot').classList.add('app__shot--empty')" />
+              <div class="app__shot-fallback">Lexi&nbsp;Scan</div>
+            </div>
+            <div class="app__info">
+              <h3 class="app__name">Lexi Scan</h3>
+              <p class="app__tag">AI flashcards maker for language learners</p>
+              <p class="app__desc">Scan any text and AI turns it into vocabulary flashcards you review with spaced repetition. Built with Expo and React Native, free to use, bring your own Gemini key.</p>
+              <a class="btn btn--primary btn--sm app__link" href="#" data-app-link="lexiscan">View on App Store</a>
+            </div>
+          </article>
+        </div>
+      </section>
 
-      <div class="apps">
-        <!-- SEEN -->
-        <article class="app">
-          <div class="app__shot">
-            <img src="assets/img/seen-screenshot.png" alt="Seen app screenshot" onerror="this.closest('.app__shot').classList.add('app__shot--empty')" />
-            <div class="app__shot-fallback">SEEN</div>
-          </div>
-          <div class="app__info">
-            <h3 class="app__name">Seen</h3>
-            <p class="app__tag">Goal &amp; streak tracker for your lock screen</p>
-            <p class="app__desc">
-              A native iOS app built on the principle that "what gets seen gets done."
-              Seen surfaces your goals and streaks right on your lock screen, so the
-              things you care about stay in front of you. SwiftUI and SwiftData, no
-              paywall, no ads.
-            </p>
-            <a class="btn btn--primary btn--sm app__link" href="#" data-app-link="seen">View on App Store</a>
-          </div>
-        </article>
+      <!-- ============ CV ============ -->
+      <section class="page" id="cv">
+        <div class="cv__head">
+          <h2 class="page__title">Curriculum Vitae</h2>
+          <a class="btn btn--soft btn--sm" href="https://drive.google.com/file/d/1u_RwJXXvzhaQl2QmB7T5UFADIq1a97uq/view?usp=sharing" target="_blank" rel="noopener">Download PDF</a>
+        </div>
 
-        <!-- LEXI SCAN -->
-        <article class="app">
-          <div class="app__shot">
-            <img src="assets/img/lexiscan-screenshot.png" alt="Lexi Scan app screenshot" onerror="this.closest('.app__shot').classList.add('app__shot--empty')" />
-            <div class="app__shot-fallback">Lexi&nbsp;Scan</div>
-          </div>
-          <div class="app__info">
-            <h3 class="app__name">Lexi Scan</h3>
-            <p class="app__tag">AI flashcards maker for language learners</p>
-            <p class="app__desc">
-              Scan any text, and AI turns it into vocabulary flashcards you review
-              with spaced repetition. Built with Expo and React Native, free to use
-              (bring your own Gemini key). Designed for people learning a language
-              in the wild, one photo at a time.
-            </p>
-            <a class="btn btn--primary btn--sm app__link" href="#" data-app-link="lexiscan">View on App Store</a>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===================== BEYOND WORK ===================== -->
-  <section class="section beyond" id="beyond">
-    <div class="wrap">
-      <p class="eyebrow">Beyond Work</p>
-      <h2 class="section__title">Facts about me.</h2>
-
-      <div class="beyond__grid">
-        <div class="beyond__col">
-          <h3>Awards</h3>
-          <ul>
-            <li><strong>2025</strong> — Product Excellence Award, Truecaller Global Performance Award</li>
-            <li><strong>2024</strong> — Special Recognition Award, Truecaller Global Performance Award</li>
-            <li><strong>2025</strong> — Runner-up, Truecaller Labs Days (TrueStories concept, out of 30+ pitched ideas, picked up for development)</li>
+        <h3 class="subhead">Work Experience</h3>
+        <div class="entry">
+          <h4 class="entry__title">Growth Product Manager</h4>
+          <p class="entry__org"><strong>Truecaller</strong> · Stockholm, Sweden</p>
+          <p class="entry__date">2022 – Present</p>
+          <ul class="entry__list">
+            <li>Drive onboarding, activation, retention, and monetization for a 500M+ user global consumer app.</li>
+            <li>Shipped a block-settings onboarding screen that lifted premium purchase +72%, rolled out worldwide.</li>
+            <li>Improved worldwide registration rate +20% through end-to-end funnel optimization.</li>
+            <li>Led an app-upgrade program to 92% adoption across 41M+ users, coordinating 8+ teams.</li>
+            <li>Raised Day-7 retention +15pp over three years via lifecycle sequencing and localization.</li>
+          </ul>
+        </div>
+        <div class="entry">
+          <h4 class="entry__title">Business Development &amp; Project Manager</h4>
+          <p class="entry__org"><strong>Foreign Investment Real Estate</strong> · Vietnam</p>
+          <p class="entry__date">2018 – 2020</p>
+          <ul class="entry__list">
+            <li>Led business development and project delivery for foreign investment projects.</li>
+            <li>Coordinated legal, facilities, and commercial teams to deliver 100+ properties on schedule.</li>
           </ul>
         </div>
 
-        <div class="beyond__col">
-          <h3>Education</h3>
-          <ul>
-            <li><strong>2020–2022</strong> — M.Sc. Innovation &amp; Industrial Management, University of Gothenburg, Sweden. 14/15 courses with distinction, Student Ambassador.</li>
-            <li><strong>2021</strong> — Exchange Semester, Master in Management, ESSEC Business School, France (top 3 business school in France).</li>
-            <li><strong>2014–2018</strong> — B.A. International Business Economics, Foreign Trade University, Vietnam. GPA 3.6/4 (top 7%).</li>
-          </ul>
+        <h3 class="subhead">Education</h3>
+        <div class="entry">
+          <h4 class="entry__title">M.Sc. Innovation &amp; Industrial Management</h4>
+          <p class="entry__org"><strong>University of Gothenburg</strong> · Sweden</p>
+          <p class="entry__date">2020 – 2022</p>
+          <ul class="entry__list"><li>14/15 courses passed with distinction. Student Ambassador.</li></ul>
+        </div>
+        <div class="entry">
+          <h4 class="entry__title">Exchange Semester, Master in Management</h4>
+          <p class="entry__org"><strong>ESSEC Business School</strong> · France</p>
+          <p class="entry__date">2021</p>
+          <ul class="entry__list"><li>Top 3 business school in France.</li></ul>
+        </div>
+        <div class="entry">
+          <h4 class="entry__title">B.A. International Business Economics</h4>
+          <p class="entry__org"><strong>Foreign Trade University</strong> · Vietnam</p>
+          <p class="entry__date">2014 – 2018</p>
+          <ul class="entry__list"><li>GPA 3.6/4 (top 7%).</li></ul>
         </div>
 
-        <div class="beyond__col">
-          <h3>Scholarships</h3>
-          <ul>
-            <li>Swedish Institute Scholarship for Global Professionals, awarded to 350 scholars worldwide, 3–4% acceptance rate; fully funded master's scholarship.</li>
-            <li>Luong Van Can Scholarship, top 10% excellent student award covering tuition and monthly stipend.</li>
-          </ul>
+        <h3 class="subhead">Toolkit</h3>
+        <div class="skills">
+          <div class="skill"><h3>Funnel Optimization</h3><p>End-to-end optimization from onboarding and activation through retention to monetization.</p></div>
+          <div class="skill"><h3>Growth Hacking &amp; Experimentation</h3><p>Hypothesis generation and rigorous A/B test roadmaps via Confidence, Firebase, and Clevertap.</p></div>
+          <div class="skill"><h3>Global Market Localization</h3><p>India, Nigeria, Colombia, Kenya, South Africa, Ethiopia, Malaysia, Indonesia, LATAM, EU, and Arabic markets.</p></div>
+          <div class="skill"><h3>Analytics &amp; Data Investigation</h3><p>SQL/BigQuery, Looker Studio, Validio. From a symptom to a root cause without hand-holding.</p></div>
+          <div class="skill"><h3>Cross-functional Leadership</h3><p>Coordinates 8+ teams: Design, Analytics, CRM, Release, Identity, Premium, QA, Legal, Brand.</p></div>
+          <div class="skill"><h3>Storytelling &amp; Reporting</h3><p>Weekly PPP reports, monthly board reports, quarterly health-check presentations to leadership.</p></div>
         </div>
 
-        <div class="beyond__col">
-          <h3>Certifications</h3>
-          <ul>
-            <li>Professional Scrum Product Owner I &amp; II (Scrum.org, 2023 &amp; 2024)</li>
-            <li>Data Analytics Professional (Google, 2021)</li>
-          </ul>
+        <h3 class="subhead">Awards &amp; Recognition</h3>
+        <ul class="list">
+          <li><strong>2025</strong> — Product Excellence Award, Truecaller Global Performance Award</li>
+          <li><strong>2024</strong> — Special Recognition Award, Truecaller Global Performance Award</li>
+          <li><strong>2025</strong> — Runner-up, Truecaller Labs Days (TrueStories, out of 30+ pitched ideas, picked up for development)</li>
+        </ul>
+
+        <h3 class="subhead">Certifications</h3>
+        <ul class="list">
+          <li>Professional Scrum Product Owner I &amp; II (Scrum.org, 2023 &amp; 2024)</li>
+          <li>Data Analytics Professional (Google, 2021)</li>
+        </ul>
+
+        <h3 class="subhead">Scholarships</h3>
+        <ul class="list">
+          <li>Swedish Institute Scholarship for Global Professionals, awarded to 350 scholars worldwide (3–4% acceptance); fully funded master's scholarship.</li>
+          <li>Luong Van Can Scholarship, top 10% excellent student award covering tuition and monthly stipend.</li>
+        </ul>
+
+        <h3 class="subhead">Volunteering</h3>
+        <ul class="list">
+          <li><strong>2020 – 2021</strong> — Project Manager, Swedish Institute Network Innovation Board.</li>
+          <li><strong>2014 – 2017</strong> — President, Foreign Trade University Japanese Club (100+ events, one gathering ~3,000 students).</li>
+        </ul>
+      </section>
+
+      <!-- ============ TESTIMONIALS ============ -->
+      <section class="page" id="testimonials">
+        <h2 class="page__title">Testimonials</h2>
+        <p class="lead">Direct quotes from manager and peer performance reviews.</p>
+        <div class="quotes">
+          <figure class="quote">
+            <blockquote>"Duyen is a highly committed and motivated professional with a meticulous approach and a strong drive to get things done. She demonstrates exceptional perseverance. She is now thinking several steps ahead, demonstrating proactive problem-solving."</blockquote>
+            <figcaption><strong>Supreeth, Manager</strong> — 2024 Annual Review (rated Exceeding Expectations; promoted to L2)</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>"Duyen's persistence, creativity, and user-first thinking had a clear and measurable impact. This work truly stands out and deserves recognition."</blockquote>
+            <figcaption><strong>Manager nomination</strong> — for the Day 1 push notification project</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>"Exceptionally talented, dedicated, well-organized, and proactive. Clearly on track (and beyond) for the next promotion level."</blockquote>
+            <figcaption><strong>Peer Review</strong> — 2024</figcaption>
+          </figure>
+          <figure class="quote">
+            <blockquote>"Methodical approach to problem solving. Always willing to raise her hand to figure out why something is not working."</blockquote>
+            <figcaption><strong>Peer Review</strong> — 2024</figcaption>
+          </figure>
         </div>
+      </section>
 
-        <div class="beyond__col">
-          <h3>Side Projects &amp; Volunteering</h3>
-          <ul>
-            <li><strong>2020–2021</strong> — Project Manager, Swedish Institute Network Innovation Board. Led board initiatives and managed member projects and events in Sweden.</li>
-            <li><strong>2014–2017</strong> — President, Foreign Trade University Japanese Club. Organized 100+ events, including one gathering ~3,000 students across colleges.</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+      <footer class="footer">
+        © 2026 Duyen Dinh · Growth Product Manager
+      </footer>
 
-  <!-- ===================== CONTACT ===================== -->
-  <section class="section contact" id="contact">
-    <div class="wrap contact__inner">
-      <p class="eyebrow">Get in Touch</p>
-      <h2 class="section__title">Let's drive growth together.</h2>
-      <p class="section__lead">
-        Open to new opportunities and conversations about growth, product strategy,
-        and building experiences that scale.
-      </p>
-      <div class="contact__cta">
-        <a class="btn btn--primary" href="mailto:myduyen28ftu2@gmail.com">Say Hello</a>
-        <a class="btn btn--soft" href="https://drive.google.com/file/d/1u_RwJXXvzhaQl2QmB7T5UFADIq1a97uq/view?usp=sharing" target="_blank" rel="noopener">Download Resume</a>
-        <a class="btn btn--ghost" href="https://www.linkedin.com/in/duyen-dinh-dtmd/" target="_blank" rel="noopener">LinkedIn</a>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <span>© 2026 Duyen Dinh. All rights reserved.</span>
-      <span>Growth Product Manager</span>
-    </div>
-  </footer>
+    </main>
+  </div>
 
   <script src="js/main.js"></script>
 </body>
