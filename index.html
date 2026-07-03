@@ -26,7 +26,6 @@
         <a href="#home" data-nav>Home</a>
         <a href="#portfolio" data-nav>Portfolio</a>
         <a href="#cv" data-nav>CV</a>
-        <a href="#testimonials" data-nav>Testimonials</a>
       </nav>
       <button class="topnav__toggle" aria-label="Open menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -75,7 +74,7 @@
         </li>
         <li>
           <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
-          <a href="https://drive.google.com/file/d/1u_RwJXXvzhaQl2QmB7T5UFADIq1a97uq/view?usp=sharing" target="_blank" rel="noopener">Resume (PDF)</a>
+          <a href="Duyen_Dinh_CV_2026.pdf" target="_blank" rel="noopener">Resume (PDF)</a>
         </li>
       </ul>
     </aside>
@@ -106,6 +105,15 @@
           Legal actually likes working with.
         </p>
 
+        <h3 class="subhead">Where I'm heading</h3>
+        <p class="body">
+          I want to keep growing at the intersection of growth and trust: owning
+          bigger slices of the user journey, and turning one-off experiments into
+          systems other teams build on. I'm most drawn to products where
+          onboarding, monetization, and privacy all have to work at once, and to
+          using AI to shorten the path from idea to shipped.
+        </p>
+
         <div class="stats">
           <div class="stat"><span class="stat__num">500M+</span><span class="stat__label">Users Reached</span></div>
           <div class="stat"><span class="stat__num">8+ yrs</span><span class="stat__label">Product &amp; Project Mgmt</span></div>
@@ -123,11 +131,9 @@
 
         <h3 class="subhead">Explore</h3>
         <p class="body">
-          Take a look at my <a href="#portfolio" data-nav>product portfolio</a>,
-          read my full <a href="#cv" data-nav>CV</a>, or see what colleagues say
-          in <a href="#testimonials" data-nav>testimonials</a>. Open to
-          conversations about growth, onboarding, and building experiences that
-          scale.
+          Take a look at my <a href="#portfolio" data-nav>product portfolio</a> or
+          read my full <a href="#cv" data-nav>CV</a>. Always happy to talk about
+          growth, onboarding, and building experiences that scale.
         </p>
       </section>
 
@@ -135,8 +141,10 @@
       <section class="page" id="portfolio">
         <h2 class="page__title">Selected Work</h2>
         <p class="lead">
-          Nine projects from four years at Truecaller. Each one has a hypothesis,
-          a holdout, and an honest result. Click any card to read the full story.
+          I own Android onboarding at Truecaller: every screen between install and
+          a working caller ID. Four projects that show how I work, each with a
+          hypothesis, a holdout, and an honest result. Click any card to read the
+          full story.
         </p>
 
         <div class="cases">
@@ -220,31 +228,6 @@
           <article class="case">
             <div class="case__head">
               <div class="case__meta">
-                <div class="tags"><span class="tag">Growth</span><span class="tag">Security</span><span class="tag">Lifecycle</span></div>
-                <h3 class="case__title">Moving millions of users off tampered app versions</h3>
-                <p class="case__tagline">Nobody owned the problem, so I picked it up</p>
-              </div>
-              <div class="case__metric"><span class="case__metric-num">Millions</span><span class="case__metric-label">Users migrated</span></div>
-            </div>
-            <button class="case__toggle" aria-expanded="false">Read full case study</button>
-            <div class="case__body" hidden>
-              <div class="story">
-                <p>A large user segment was running modified APKs: no updates, no security patches, and revenue leakage. Nobody owned the problem, so I picked it up.</p>
-                <ul>
-                  <li>Sized the segment, wrote the proposal, and set up tracking (new data field, campaign channel, measurement queries) before touching a single user.</li>
-                  <li>Ran a 75,000-user push pilot in 3 languages with a control group, read the honest result (weak reinstall evidence), and adjusted: in-app nudges, localized messaging, and an onboarding intervention so migrated users can't loop back onto the tampered build.</li>
-                  <li>Scaled the campaign to the full multi-million-user segment while coordinating Identity, CRM, and data teams.</li>
-                </ul>
-                <h4>Result</h4>
-                <p><strong>A one-off cleanup became a standing migration program</strong> with its own channel, phased plan, and measurable campaign impact.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- 5 -->
-          <article class="case">
-            <div class="case__head">
-              <div class="case__meta">
                 <div class="tags"><span class="tag">Retention</span><span class="tag">Experimentation</span><span class="tag">Global</span></div>
                 <h3 class="case__title">First-week retention, one experiment at a time</h3>
                 <p class="case__tagline">Not one hero launch. A portfolio of 20+ experiments a year.</p>
@@ -258,7 +241,7 @@
                 <ul>
                   <li>Moved the backup prompt from onboarding to day 3: D7 retention improved in pilot markets, so we rolled it out across the rest of the world and then tested India separately.</li>
                   <li>Notified users whose verification got throttled so they could finish signing up: 24% more users (14 percentage points) completed verification in India.</li>
-                  <li>Ran the app upgrade program for users stuck on old versions: soft nudges, then a hard upgrade wall reaching 2.7 million users with a 41% upgrade rate, paused and reworked when user complaints surfaced a real issue.</li>
+                  <li>Ran the app upgrade program for users stuck on old versions: soft nudges, then a hard upgrade wall reaching 2.7 million users, paused and reworked when user complaints surfaced a real issue.</li>
                   <li>Killed plenty: a caller ID tutorial that lowered retention, a premium interstitial that didn't convert, a copy test with no lift. Each one documented on Confluence so the team never re-runs a dead idea.</li>
                 </ul>
                 <h4>Result</h4>
@@ -267,113 +250,22 @@
             </div>
           </article>
 
-          <!-- 6 -->
-          <article class="case">
-            <div class="case__head">
-              <div class="case__meta">
-                <div class="tags"><span class="tag">Retention</span><span class="tag">CRM</span><span class="tag">Lifecycle</span></div>
-                <h3 class="case__title">The first week: lifecycle push notifications</h3>
-                <p class="case__tagline">From ad hoc campaigns to an automated system</p>
-              </div>
-              <div class="case__metric"><span class="case__metric-num">+1.3%</span><span class="case__metric-label">D7 Retention (Nigeria)</span></div>
-            </div>
-            <button class="case__toggle" aria-expanded="false">Read full case study</button>
-            <div class="case__body" hidden>
-              <div class="story">
-                <p>New users used to hear nothing from us after install. I built the first-week communication program with our CRM team, then automated it.</p>
-                <ul>
-                  <li>Designed and tested a 7-day push series: English versus local languages (Hinglish, Arabic and more), always against a holdout group so retention claims held up.</li>
-                  <li>Automated the series for all new users in Malaysia and Kenya, then scaled testing across our top 5 markets, replacing one-off manual campaigns.</li>
-                  <li>Extended the playbook: a day-1 push about blocking in LATAM, a day-5 referral push, win-back pushes to lapsed users, and large-scale re-engagement coordinated with CRM and Legal.</li>
-                </ul>
-                <h4>Result</h4>
-                <p><strong>Overall D7 retention in Nigeria rose 1.3% during testing</strong>, and first-week communication went from ad hoc campaigns to an automated system with holdout measurement built in.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- 7 -->
-          <article class="case">
-            <div class="case__head">
-              <div class="case__meta">
-                <div class="tags"><span class="tag">Growth</span><span class="tag">Analytics</span><span class="tag">Referrals</span></div>
-                <h3 class="case__title">Referrals: from stalled feature to working funnel</h3>
-                <p class="case__tagline">Gave the program numbers, then improved them</p>
-              </div>
-              <div class="case__metric"><span class="case__metric-num">Fixed</span><span class="case__metric-label">Tracked, tested funnel</span></div>
-            </div>
-            <button class="case__toggle" aria-expanded="false">Read full case study</button>
-            <div class="case__body" hidden>
-              <div class="story">
-                <p>Referrals existed but nobody could say if they worked. I gave the program numbers, then improved them.</p>
-                <ul>
-                  <li>Built the referral dashboard, found and fixed a logging bug that had quietly corrupted the funnel data.</li>
-                  <li>Shipped new trigger points (name-suggestion moments, contact editor), a day-5 push with CRM, and a custom Play Store listing so invited users land on a referral-specific page.</li>
-                  <li>A/B tested the invite message itself, public versus private framing, across markets.</li>
-                </ul>
-                <h4>Result</h4>
-                <p><strong>Referral performance became a tracked, tested funnel</strong> with each step owned and measured, instead of a feature flag nobody watched.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- 8 -->
-          <article class="case">
-            <div class="case__head">
-              <div class="case__meta">
-                <div class="tags"><span class="tag">Localization</span><span class="tag">Initiative</span></div>
-                <h3 class="case__title">Localization nobody asked for</h3>
-                <p class="case__tagline">15,400 words rewritten, on my own initiative</p>
-              </div>
-              <div class="case__metric"><span class="case__metric-num">15,400</span><span class="case__metric-label">Words rewritten</span></div>
-            </div>
-            <button class="case__toggle" aria-expanded="false">Read full case study</button>
-            <div class="case__body" hidden>
-              <div class="story">
-                <p>I noticed the Vietnamese app translation was poor. Nobody asked me to fix it. I fixed it.</p>
-                <ul>
-                  <li>Reviewed and rewrote every phrase in the Android app: 15,400 words across 70 pages, on my own initiative, then extended it to the website, App Store listing, and onboarding copy.</li>
-                  <li>Added Amharic after user interviews showed Ethiopian users wanted it, added English (US/GB) variants, and set up the workflow where the top 10 languages get human proofreading.</li>
-                  <li>Connected local influencer agencies to our marketing team to support the Vietnam push.</li>
-                </ul>
-                <h4>Result</h4>
-                <p><strong>Better first impressions in growth markets</strong>, and a translation quality process that outlived the original fix.</p>
-              </div>
-            </div>
-          </article>
-
-          <!-- 9 -->
-          <article class="case">
-            <div class="case__head">
-              <div class="case__meta">
-                <div class="tags"><span class="tag">Strategy</span><span class="tag">Leadership</span><span class="tag">Board</span></div>
-                <h3 class="case__title">Before product: strategy and the boardroom</h3>
-                <p class="case__tagline">Comfortable in rooms most PMs avoid</p>
-              </div>
-              <div class="case__metric"><span class="case__metric-num">3+ yrs</span><span class="case__metric-label">Board reporting</span></div>
-            </div>
-            <button class="case__toggle" aria-expanded="false">Read full case study</button>
-            <div class="case__body" hidden>
-              <div class="story">
-                <p>My first year was the CEO Office, which is why I'm comfortable in rooms most PMs avoid.</p>
-                <ul>
-                  <li>Ran the company's 2023 strategy process: stakeholder interviews, analysis, 5 leadership workshops, and the strategy presentation to the board.</li>
-                  <li>Defined the company-wide engagement metric with data science and leadership, then rolled out goal-setting to every business unit.</li>
-                  <li>PMO for a 7-initiative transformation program; owned the monthly board business report, a responsibility I've kept for 3+ years through every role change.</li>
-                </ul>
-                <h4>Result</h4>
-                <p><strong>I can translate between a board slide and a Jira ticket</strong>, because I've written both for the same feature.</p>
-              </div>
-            </div>
-          </article>
-
         </div>
+
+        <h3 class="subhead">More at Truecaller</h3>
+        <ul class="list">
+          <li><strong>Tampered-app migration.</strong> Moved a multi-million-user segment off modified APKs, turning a one-off cleanup into a standing migration program with its own channel and phased plan.</li>
+          <li><strong>First-week lifecycle push program.</strong> Built and automated a 7-day push series with holdout measurement; D7 retention in Nigeria rose 1.3% during testing.</li>
+          <li><strong>Referrals revamp.</strong> Fixed a logging bug, added new trigger points and a custom Play Store listing, and A/B tested invite framing to turn referrals into a tracked funnel.</li>
+          <li><strong>Vietnamese localization.</strong> Rewrote 15,400 words across the app, website, and store listing on my own initiative; added Amharic after user interviews.</li>
+          <li><strong>CEO Office, strategy &amp; board.</strong> Ran the 2023 company strategy process and have owned the monthly board business report for 3+ years.</li>
+        </ul>
 
         <!-- Side projects -->
         <h2 class="page__title page__title--mt">Side Projects</h2>
         <p class="lead">
-          Nights-and-weekends products, taken from idea to the App Store. Where I
-          get to be the PM, the designer, and the builder.
+          I ship end-to-end, not just specs. Two iOS apps I built, designed, and
+          submitted solo, using AI to move from idea to App Store.
         </p>
         <div class="apps">
           <article class="app">
@@ -407,7 +299,7 @@
       <section class="page" id="cv">
         <div class="cv__head">
           <h2 class="page__title">Curriculum Vitae</h2>
-          <a class="btn btn--soft btn--sm" href="https://drive.google.com/file/d/1u_RwJXXvzhaQl2QmB7T5UFADIq1a97uq/view?usp=sharing" target="_blank" rel="noopener">Download PDF</a>
+          <a class="btn btn--soft btn--sm" href="Duyen_Dinh_CV_2026.pdf" target="_blank" rel="noopener">Download PDF</a>
         </div>
 
         <p class="lead">
@@ -492,37 +384,23 @@
         <p class="cv__refs">References available upon request.</p>
       </section>
 
-      <!-- ============ TESTIMONIALS ============ -->
-      <section class="page" id="testimonials">
-        <h2 class="page__title">Testimonials</h2>
-        <p class="lead">Direct quotes from manager and peer performance reviews.</p>
-        <div class="quotes">
-          <figure class="quote">
-            <blockquote>"Duyen is a highly committed and motivated professional with a meticulous approach and a strong drive to get things done. She demonstrates exceptional perseverance. She is now thinking several steps ahead, demonstrating proactive problem-solving."</blockquote>
-            <figcaption><strong>Supreeth, Manager</strong> · 2024 Annual Review (Exceeding Expectations; promoted to L2)</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>"Duyen's persistence, creativity, and user-first thinking had a clear and measurable impact. This work truly stands out and deserves recognition."</blockquote>
-            <figcaption><strong>Manager nomination</strong> · for the Day 1 push notification project</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>"Exceptionally talented, dedicated, well-organized, and proactive. Clearly on track (and beyond) for the next promotion level."</blockquote>
-            <figcaption><strong>Peer Review</strong> · 2024</figcaption>
-          </figure>
-          <figure class="quote">
-            <blockquote>"Methodical approach to problem solving. Always willing to raise her hand to figure out why something is not working."</blockquote>
-            <figcaption><strong>Peer Review</strong> · 2024</figcaption>
-          </figure>
-        </div>
-      </section>
-
       <footer class="footer">
-        © 2026 Duyen Dinh · Product Manager, Growth &amp; Onboarding
+        <div class="footer__links">
+          <a href="mailto:myduyen28ftu2@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/duyen-dinh-dtmd/" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://github.com/DuyenDinh" target="_blank" rel="noopener">GitHub</a>
+          <a href="Duyen_Dinh_CV_2026.pdf" target="_blank" rel="noopener">Resume</a>
+        </div>
+        <span>© 2026 Duyen Dinh · Product Manager, Growth &amp; Onboarding</span>
       </footer>
 
     </main>
   </div>
 
   <script src="js/main.js"></script>
+
+  <!-- Analytics: create a free account at goatcounter.com, register your site,
+       then replace YOURCODE below with your code. Inactive until you do. -->
+  <script data-goatcounter="https://YOURCODE.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>

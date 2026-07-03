@@ -8,7 +8,7 @@ const APP_LINKS = {
   lexiscan: '',
 };
 
-const PAGES = ['home', 'portfolio', 'cv', 'testimonials'];
+const PAGES = ['home', 'portfolio', 'cv'];
 
 document.addEventListener('DOMContentLoaded', () => {
 

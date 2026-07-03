@@ -276,7 +276,10 @@ a { color: inherit; text-decoration: none; }
 .quote figcaption strong { color: var(--ink); }
 
 /* ---------- Footer ---------- */
-.footer { margin-top: 56px; padding: 26px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 14px; }
+.footer { margin-top: 56px; padding: 26px 0; border-top: 1px solid var(--line); color: var(--ink-soft); font-size: 14px; display: flex; flex-direction: column; gap: 10px; }
+.footer__links { display: flex; gap: 20px; flex-wrap: wrap; }
+.footer__links a { color: var(--blue-deep); font-weight: 600; }
+.footer__links a:hover { text-decoration: underline; }
 
 /* ---------- Responsive ---------- */
 @media (max-width: 880px) {
