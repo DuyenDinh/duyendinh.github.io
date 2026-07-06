@@ -22,6 +22,8 @@
     .chip--core { background: var(--blue-soft); color: var(--blue-deep); border-color: transparent; }
     .chip--cut { color: var(--ink-soft); text-decoration: line-through; opacity: .7; }
     .chip__arrow { color: var(--ink-soft); }
+    .phones4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 6px; }
+    @media (max-width: 620px) { .phones4 { grid-template-columns: 1fr 1fr; } }
   </style>
 </head>
 <body>
@@ -71,6 +73,13 @@
         My mandate was not a one-off patch. It was to build a continuous
         improvement cycle for worldwide registration rate.
       </p>
+      <div class="phones4">
+        <figure class="phone"><img src="assets/img/cases/funnel/1-welcome.png" alt="Truecaller welcome screen" /><figcaption>Welcome</figcaption></figure>
+        <figure class="phone"><img src="assets/img/cases/funnel/2-number.png" alt="Enter phone number screen" /><figcaption>Enter number</figcaption></figure>
+        <figure class="phone"><img src="assets/img/cases/funnel/3-profile.png" alt="Create profile screen" /><figcaption>Profile</figcaption></figure>
+        <figure class="phone"><img src="assets/img/cases/funnel/4-premium.png" alt="Premium upgrade screen" /><figcaption>Premium</figcaption></figure>
+      </div>
+      <p style="font-size:13.5px;color:var(--ink-soft);margin-top:4px;">The core screens a new user moves through on the way to a registered account.</p>
     </section>
 
     <!-- 2. Approach -->
