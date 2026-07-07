@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seen — a lock-screen app I built and shipped — Duyen Dinh</title>
+  <meta name="description" content="Side project: Seen, a native iOS lock-screen goal app I took from user insight to the App Store, solo, discovery, design, built with AI, iterated, and shipped." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
+  <style>
+    .gallery5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 14px 0 4px; }
+    .gallery5 img { width: 100%; border-radius: 14px; box-shadow: var(--shadow-md); display: block; }
+    @media (max-width: 760px) { .gallery5 { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 460px) { .gallery5 { grid-template-columns: repeat(2, 1fr); } }
+    .stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 2px; }
+    .stack li { font-size: 13px; font-weight: 600; color: var(--blue-deep); background: var(--blue-soft); padding: 6px 12px; border-radius: 999px; }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== TOP NAV ===================== -->
+  <header class="topnav topnav--sub">
+    <div class="topnav__inner">
+      <a href="index.html#home" class="brand">Duyen<span>Dinh</span></a>
+      <nav class="topnav__links" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#cv">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="casepage">
+    <a class="casepage__back" href="index.html#portfolio">← Back to portfolio</a>
+
+    <div class="tags">
+      <span class="tag">Side Project</span>
+      <span class="tag">iOS · 0→1</span>
+      <span class="tag">Built with AI</span>
+    </div>
+    <h1 class="casepage__title">Seen: putting your goals on your lock screen</h1>
+    <p class="casepage__tagline">A native iOS app I took from a user insight all the way to the App Store, discovery, design, build, and ship, solo.</p>
+    <p class="casepage__context"><strong>Role:</strong> Product, design &amp; build (solo) &nbsp;·&nbsp; <strong>Stack:</strong> SwiftUI, WidgetKit, SwiftData &nbsp;·&nbsp; <strong>Status:</strong> Shipped to the App Store</p>
+
+    <div class="casepage__metrics">
+      <div class="cmetric"><b>Solo build</b><span>Discovery → design → build → ship, one person</span></div>
+      <div class="cmetric"><b>Native iOS</b><span>SwiftUI · WidgetKit · SwiftData, on-device</span></div>
+      <div class="cmetric"><b>Free &amp; private</b><span>No paywall, no ads, no account, nothing uploaded</span></div>
+    </div>
+
+    <!-- 1. Insight -->
+    <section>
+      <p class="kicker">The insight</p>
+      <h2>You look at your phone 100+ times a day</h2>
+      <p>
+        Every productivity app fights the same losing battle: a reminder you have
+        to open is a reminder you ignore. Meanwhile the one screen you actually see
+        dozens of times a day, your lock screen, sits empty. That's the wedge
+        behind Seen: <strong>what gets seen gets done.</strong> Put your goals,
+        streaks, and your one thing for today where you already look, and they
+        re-focus you all day long without you opening a thing.
+      </p>
+      <p>
+        Looking at the lock-screen category, the pattern was clear: the existing
+        apps paywall the one thing users want most, customization, and their
+        top complaint is exactly that. So the opening was a product built on the
+        opposite values: goal-first instead of calendar-cram, and genuinely free
+        and private instead of a paywall.
+      </p>
+    </section>
+
+    <!-- 2. Bet -->
+    <section>
+      <p class="kicker">The bet</p>
+      <h2>A full-screen wallpaper, not a tiny widget</h2>
+      <p>
+        The core product decision: don't ship another small widget hiding in a
+        corner. Seen generates a <strong>bold, full-screen wallpaper</strong> from
+        your plan, your one thing, a goal countdown, streaks, and your day's
+        schedule, impossible to miss the moment you pick up your phone. Free, on
+        your device, no account.
+      </p>
+      <div class="gallery5">
+        <img src="assets/img/cases/seen/1-lockscreen.png" alt="Seen lock screen showing goals and schedule" />
+        <img src="assets/img/cases/seen/2-countdown.png" alt="Seen goal countdown on the lock screen" />
+        <img src="assets/img/cases/seen/3-today.png" alt="Seen Today view with one thing" />
+        <img src="assets/img/cases/seen/4-calendar.png" alt="Seen calendar day planner" />
+        <img src="assets/img/cases/seen/5-wallpaper.png" alt="Seen wallpaper studio" />
+      </div>
+    </section>
+
+    <!-- 3. Build -->
+    <section>
+      <p class="kicker">Building it</p>
+      <h2>Designed and built end-to-end, with AI</h2>
+      <p>
+        I'm a product manager, not a full-time iOS engineer, so I paired with AI
+        (Claude) to go from idea to a real, shipping app, designing the
+        architecture, writing the Swift, and iterating screen by screen. It is a
+        genuine native app, not a prototype:
+      </p>
+      <ul class="clean">
+        <li><strong>SwiftUI app + WidgetKit extension</strong> with three lock-screen widgets, sharing state through an App Group so the widget and app never disagree.</li>
+        <li><strong>SwiftData</strong> for fully on-device persistence: goals, tasks, habits, streaks. No backend, no account, nothing leaves the phone.</li>
+        <li><strong>Wallpaper generated in code</strong> (SwiftUI <code>ImageRenderer</code>) and auto-set through a one-tap Shortcut automation, since Apple allows no other way to change the wallpaper.</li>
+        <li><strong>39 backgrounds drawn 100% in code</strong> as original vector art (no bundled assets, no copyright exposure), plus read-only calendar integration via EventKit to show your real day.</li>
+      </ul>
+    </section>
+
+    <!-- 4. Iterate -->
+    <section>
+      <p class="kicker">Iterating</p>
+      <h2>Shipping is where the real product questions start</h2>
+      <p>
+        Building surfaced the interesting problems. iOS Shortcuts' "Set Wallpaper"
+        action has Apple-side bugs, so chasing a perfect auto-wallpaper was a trap.
+        I re-framed the moat around <strong>reliability instead of magic</strong>:
+        widget-first (widgets always update), plus a health check that detects a
+        stale wallpaper and nudges the user to refresh.
+      </p>
+      <p>
+        Real use also surfaced product tensions I kept iterating on, whether a
+        single "one thing" felt too rigid for busy users versus a "top three," and
+        whether reminders should be scoped to a day. The point of shipping was to
+        get to exactly these questions.
+      </p>
+    </section>
+
+    <!-- 5. Ship -->
+    <section>
+      <p class="kicker">Shipping it</p>
+      <h2>From Xcode to the App Store</h2>
+      <p>
+        I packaged and submitted the whole thing myself: wrote the listing copy and
+        keywords, generated the app icon in code, produced the screenshots, and set
+        the App Privacy label to <strong>"Data Not Collected"</strong>, which is
+        simply true, because Seen makes no network calls at all. Productivity
+        category, free, 4+, private by design.
+      </p>
+      <div class="stack" aria-label="Tech stack">
+        <li>SwiftUI</li><li>WidgetKit</li><li>SwiftData</li><li>App Intents / Shortcuts</li><li>EventKit</li><li>ImageRenderer</li><li>Xcode</li>
+      </div>
+    </section>
+
+    <div class="casepage__cta">
+      <a class="btn btn--soft btn--sm" href="index.html#portfolio">← Back to portfolio</a>
+      <a class="btn btn--primary btn--sm" href="mailto:myduyen28ftu2@gmail.com">Get in touch</a>
+    </div>
+  </article>
+
+  <footer class="footer" style="max-width:860px;margin:0 auto;padding-left:24px;padding-right:24px;">
+    <div class="footer__links">
+      <a href="mailto:myduyen28ftu2@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/duyen-dinh-dtmd/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/DuyenDinh" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <span>© 2026 Duyen Dinh · Product Manager, Growth &amp; Onboarding</span>
+  </footer>
+
+</body>
+</html>
