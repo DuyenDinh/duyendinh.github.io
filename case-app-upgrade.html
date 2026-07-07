@@ -114,14 +114,13 @@
       <h2>Every nudge costs uninstalls</h2>
       <p>
         The honest part of an upgrade program is that pushing users churns some of
-        them. When the hard block screen went live, forcing users to upgrade before
-        they could continue, uninstalls in that segment jumped roughly
-        <strong>2.5×</strong>. That number only means something next to what it
-        bought, so I tracked both.
+        them. When the legacy soft-upgrade screen went live, uninstalls in that
+        segment jumped roughly <strong>2.5×</strong>. That number only means
+        something next to what it bought, so I tracked both.
       </p>
 
       <figure>
-        <svg class="ugraph" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Uninstalls rose about 2.5 times after the hard block screen, shown as a relative multiple">
+        <svg class="ugraph" viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Uninstalls rose about 2.5 times after the legacy soft upgrade screen, shown as a relative multiple">
           <text class="axis" x="26" y="150" transform="rotate(-90 26 150)">Relative uninstalls</text>
           <line x1="70" y1="250" x2="450" y2="250" stroke="var(--line)" stroke-width="2"/>
           <rect x="130" y="190" width="90" height="60" rx="6" fill="var(--blue)"/>
@@ -129,10 +128,10 @@
           <text class="cat" x="175" y="272">Before</text>
           <rect x="300" y="100" width="90" height="150" rx="6" fill="#E23B3B"/>
           <text class="val" x="345" y="88" fill="#E23B3B">2.5×</text>
-          <text class="cat" x="345" y="272">After hard block</text>
+          <text class="cat" x="345" y="272">After legacy soft nudge</text>
         </svg>
         <figcaption style="font-size:13.5px;color:var(--ink-soft);margin-top:8px;max-width:560px;">
-          Uninstalls jumped ~2.5× when the hard block screen went live. But <strong>35% of those users came back within a day</strong> (versus 14% before), and CRM win-back emails recovered more, so the net loss was a fraction of the spike.
+          Uninstalls jumped ~2.5× when the legacy soft-upgrade screen went live. But <strong>35% of those users came back within a day</strong> (versus 14% before), and CRM win-back emails recovered more, so the net loss was a fraction of the spike.
         </figcaption>
       </figure>
     </section>
@@ -152,7 +151,7 @@
         <li>Ran a pilot first, then rolled the hard upgrade out in <strong>short 3-day bursts</strong> per version rather than all at once.</li>
         <li>Projected a loss of 30–50K DAU per 1M subjected to the hard upgrade; the actual net loss came in at <strong>2.8%</strong>, at the low end of the estimate.</li>
         <li>Paused the hard upgrade the moment users reported install and open issues on certain builds, rather than pushing people onto a broken version.</li>
-        <li>Wrapped the program ahead of the IPL cricket season, when ad revenue peaks, to avoid any risk to monetization at the worst possible time.</li>
+        <li>Wrapped the program ahead of the deadline for peak ads season, to avoid any risk to monetization at the worst possible time.</li>
       </ul>
     </section>
 
@@ -163,7 +162,6 @@
       <ul class="clean">
         <li><strong>136M daily active users upgraded to version 14.26+</strong>, cutting users on outdated builds from 167M to 8.7% of DAU and beating the 10–12% goal.</li>
         <li>The hard upgrade landed at a <strong>2.8% net uninstall rate</strong>, under the 3–5% projection.</li>
-        <li>An earlier run of the same playbook upgraded <strong>27M users</strong> to version 13.53 to keep ads compliant with Google.</li>
         <li>Codified into a reusable playbook: climb the ladder in order, use the hard upgrade only in short bursts, and re-enable it after a cool-off so users never learn to ignore it.</li>
       </ul>
     </section>
