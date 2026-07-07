@@ -24,6 +24,9 @@
     .chip__arrow { color: var(--ink-soft); }
     .phones4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; margin: 16px 0 6px; }
     @media (max-width: 620px) { .phones4 { grid-template-columns: 1fr 1fr; } }
+    .got { display: grid; grid-template-columns: 1fr 200px; gap: 26px; align-items: center; margin: 6px 0 4px; }
+    .got figure { margin: 0; }
+    @media (max-width: 620px) { .got { grid-template-columns: 1fr; justify-items: center; } .got figure { max-width: 220px; } }
   </style>
 </head>
 <body>
@@ -138,11 +141,14 @@
         they're in.
       </p>
 
-      <div class="callout">
-        <b>Google One Tap for returning users:</b> anyone who has used Truecaller
-        before is recognized and signed in with a single tap, skipping
-        phone-number entry and profile setup entirely, and reaching a working app
-        in seconds.
+      <div class="got">
+        <div class="callout" style="margin:0;">
+          <b>Google One Tap for returning users:</b> anyone who has used Truecaller
+          before is recognized and signed in with a single tap, skipping
+          phone-number entry and profile setup entirely, and reaching a working app
+          in seconds.
+        </div>
+        <figure class="phone"><img src="assets/img/cases/funnel/got.png" alt="Google One Tap: choose an account sheet" /><figcaption>One tap, and returning users are in.</figcaption></figure>
       </div>
 
       <div class="steps" aria-label="Core flow kept, non-mandatory steps deferred">
@@ -163,6 +169,20 @@
         <div class="skill"><h3>Shorter onboarding</h3><p>Cleaned and deferred 4 non-mandatory steps to post-registration days, so users reach a working app sooner.</p></div>
         <div class="skill"><h3>Localized registration</h3><p>Tailored registration steps and verification methods for focus growth markets and regions, since drop-off varied so much by market.</p></div>
       </div>
+    </section>
+
+    <!-- Ongoing hygiene -->
+    <section>
+      <p class="kicker">Ongoing hygiene</p>
+      <h2>Smaller wins along the way</h2>
+      <p>
+        Beyond the big levers, the cycle runs as a steady stream of small, measured
+        fixes. A couple of examples:
+      </p>
+      <ul class="clean">
+        <li>Moved the backup prompt from onboarding to day 3: D7 retention improved in pilot markets, so we rolled it out across the rest of the world, then tested India separately.</li>
+        <li>Notified users whose verification got throttled so they could finish signing up: <strong>24% more users (14 percentage points) completed verification in India</strong>.</li>
+      </ul>
     </section>
 
     <!-- 4. Result -->
