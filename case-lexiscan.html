@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lexi Scan: a flashcards app I built and shipped · Duyen Dinh</title>
+  <meta name="description" content="Side project: Lexi Scan, an AI flashcards maker I took from my own language-learning friction to the App Store, solo, discovery, design, built with AI, and shipped." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
+  <style>
+    .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 14px 0 4px; }
+    .shots figure { margin: 0; }
+    .shots img { width: 100%; border-radius: 16px; box-shadow: var(--shadow-md); display: block; }
+    .shots figcaption { font-size: 12.5px; font-weight: 600; color: var(--ink-soft); text-align: center; margin-top: 9px; line-height: 1.35; }
+    @media (max-width: 620px) { .shots { grid-template-columns: repeat(2, 1fr); } }
+    .stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 2px; }
+    .stack li { font-size: 13px; font-weight: 600; color: var(--blue-deep); background: var(--blue-soft); padding: 6px 12px; border-radius: 999px; }
+
+    /* ---- user journey map ---- */
+    .journey { margin: 18px 0 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .journey__grid { display: grid; grid-template-columns: 148px repeat(5, minmax(150px, 1fr)); min-width: 860px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; box-shadow: var(--shadow-sm); }
+    .journey__row { display: contents; }
+    .journey__cell { padding: 14px 15px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+    .journey__grid > .journey__row:last-child .journey__cell { border-bottom: none; }
+    .journey__cell:nth-child(6n) { border-right: none; }
+    .journey__label { font-weight: 700; font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--blue-deep); background: var(--bg-tint); display: flex; align-items: center; }
+    .journey__phase { font-family: var(--font-head, "Fraunces"), serif; font-weight: 600; font-size: 15px; color: var(--ink); background: var(--blue-soft); text-align: center; justify-content: center; }
+    .journey__emo { font-size: 22px; text-align: center; padding: 10px; }
+    .journey__pain { color: #a23b52; }
+    .journey__win { color: var(--blue-deep); }
+    .journey__hint { font-size: 12.5px; color: var(--ink-soft); margin: 6px 2px 0; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== TOP NAV ===================== -->
+  <header class="topnav topnav--sub">
+    <div class="topnav__inner">
+      <a href="index.html#home" class="brand">Duyen<span>Dinh</span></a>
+      <nav class="topnav__links" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#cv">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="casepage">
+    <a class="casepage__back" href="index.html#portfolio">← Back to portfolio</a>
+
+    <div class="tags">
+      <span class="tag">Hobby project</span>
+      <span class="tag">iOS · 0→1</span>
+      <span class="tag">Built with AI</span>
+    </div>
+    <h1 class="casepage__title">Lexi Scan: turn anything you read into flashcards</h1>
+    <p class="casepage__tagline">A hobby project born from my own Swedish-learning frustration, taken all the way to the App Store: discovery, design, build, and ship.</p>
+    <p class="casepage__context"><strong>Role:</strong> Product, design &amp; build &nbsp;·&nbsp; <strong>Built with:</strong> Claude AI &nbsp;·&nbsp; <strong>Status:</strong> Live on the App Store</p>
+
+    <div class="casepage__metrics">
+      <div class="cmetric"><b>Hobby project</b><span>Discovery to App Store, nights and weekends</span></div>
+      <div class="cmetric"><b>Built with AI</b><span>Designed and coded end-to-end with Claude</span></div>
+      <div class="cmetric"><b>Free, no limits</b><span>Bring your own Gemini key, nothing uploaded</span></div>
+    </div>
+
+    <!-- 1. Insight -->
+    <section>
+      <p class="kicker">The insight</p>
+      <h2>The word you meet in the wild is the one you lose</h2>
+      <p>
+        I'm learning Swedish, and the best words never arrive at my desk. They show
+        up mid-episode on TV, or halfway down a page of a book. To actually keep one,
+        the old routine was brutal: stop, note it down, open a translator, then later
+        sit and hand-build a flashcard. By the time I've done all that, I've missed
+        the next scene, and most words never make it in at all.
+      </p>
+      <p>
+        The tools didn't help. Most Anki-style apps expect you to import words as a
+        manual CSV file, which is exactly the kind of friction that kills a daily
+        habit. That's the idea behind
+        Lexi Scan: <strong>capture the word the moment you see it</strong>, let AI do
+        the translating and card-making, and study it later with spaced repetition.
+      </p>
+      <p>
+        <strong>Who it's for:</strong> language learners who read and watch in the
+        wild, people who want to grab a new word on the spot instead of losing it to
+        the friction of making a card by hand.
+      </p>
+    </section>
+
+    <!-- 1b. User journey map -->
+    <section>
+      <p class="kicker">The user journey</p>
+      <h2>Mapping the moment a new word appears, and slips away</h2>
+      <p>
+        This map is a <strong>persona I built from my own experience</strong>, not
+        formal research. I traced the real moment learning actually happens: not at a
+        desk, but when a new word lands while you're mid-book or mid-episode. Mapping
+        it made the drop-off obvious, the loss is never in the wanting to learn, it's
+        in the <strong>friction between seeing a word and saving it</strong>.
+      </p>
+
+      <div class="journey">
+        <div class="journey__grid">
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Stage</div>
+            <div class="journey__cell journey__phase">Meet a word</div>
+            <div class="journey__cell journey__phase">Want to keep it</div>
+            <div class="journey__cell journey__phase">Try to capture</div>
+            <div class="journey__cell journey__phase">Study later</div>
+            <div class="journey__cell journey__phase">Recall it</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Doing</div>
+            <div class="journey__cell">Reading a book or watching TV in Swedish, hits an unknown word.</div>
+            <div class="journey__cell">Wants to save it before the moment passes.</div>
+            <div class="journey__cell">Pauses, types it out, opens a translator, plans to make a card.</div>
+            <div class="journey__cell">Sits down later to review vocabulary.</div>
+            <div class="journey__cell">Tries to use the word in real conversation.</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Thinking</div>
+            <div class="journey__cell">“That's a useful word, I should learn it.”</div>
+            <div class="journey__cell">“Where do I even put this?”</div>
+            <div class="journey__cell">“This is too much effort for one word.”</div>
+            <div class="journey__cell">“Which words did I actually mean to save?”</div>
+            <div class="journey__cell">“Did any of it stick?”</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Feeling</div>
+            <div class="journey__cell journey__emo" title="Curious">🤓</div>
+            <div class="journey__cell journey__emo" title="Motivated">✍️</div>
+            <div class="journey__cell journey__emo" title="Frustrated">😤</div>
+            <div class="journey__cell journey__emo" title="Scattered">😵‍💫</div>
+            <div class="journey__cell journey__emo" title="Unsure">😐</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Pain point</div>
+            <div class="journey__cell journey__pain">The moment is fleeting, the word is gone in seconds.</div>
+            <div class="journey__cell journey__pain">No fast, single place to drop a word.</div>
+            <div class="journey__cell journey__pain">Manual translate + CSV import is too slow to keep up.</div>
+            <div class="journey__cell journey__pain">Half the words were never captured, so review is thin.</div>
+            <div class="journey__cell journey__pain">Words seen once but never rehearsed don't stick.</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">How Lexi Scan helps</div>
+            <div class="journey__cell journey__win">Point the camera or paste the text, capture in seconds.</div>
+            <div class="journey__cell journey__win">One tap sends it straight into your deck.</div>
+            <div class="journey__cell journey__win">AI extracts, translates, and builds the card for you.</div>
+            <div class="journey__cell journey__win">Every captured word is waiting, filtered to your level.</div>
+            <div class="journey__cell journey__win">Spaced repetition resurfaces it right before you forget.</div>
+          </div>
+        </div>
+      </div>
+      <p class="journey__hint">Scroll the map sideways on mobile · the emotional dip is the capture step, exactly the friction Lexi Scan removes.</p>
+
+      <p>
+        Reading the map top to bottom, the fix isn't “study harder”, it's
+        <strong>removing the capture tax</strong>. If saving a word costs one tap
+        instead of five steps, far more words survive the moment, and spaced
+        repetition can do the rest.
+      </p>
+    </section>
+
+    <!-- 2. Bet -->
+    <section>
+      <p class="kicker">The bet</p>
+      <h2>Scan the word, don't build the card</h2>
+      <p>
+        The core product decision: never make the user assemble a flashcard by hand.
+        Point the camera at a book, a subtitle, or a menu, or just paste text, and
+        <strong>Gemini AI extracts the vocabulary, translates it, and files the card
+        for you</strong>, ready to study. Free, on your device, no scan limits,
+        because it runs on your own Gemini key instead of my server.
+      </p>
+      <div class="shots">
+        <figure><img src="assets/img/cases/lexiscan/02-scan.png" alt="Lexi Scan scanning text into flashcards" /><figcaption>Scan: point, paste, capture</figcaption></figure>
+        <figure><img src="assets/img/cases/lexiscan/01-learn.png" alt="Lexi Scan home with cards due" /><figcaption>Home: your words due today</figcaption></figure>
+        <figure><img src="assets/img/cases/lexiscan/04-review.png" alt="Lexi Scan flashcard review front" /><figcaption>Review: flip to reveal</figcaption></figure>
+        <figure><img src="assets/img/cases/lexiscan/05-recall.png" alt="Lexi Scan rating a card" /><figcaption>Rate: Again · Hard · Good · Easy</figcaption></figure>
+        <figure><img src="assets/img/cases/lexiscan/03-audio.png" alt="Lexi Scan pronunciation playback" /><figcaption>Audio: hear it out loud</figcaption></figure>
+        <figure><img src="assets/img/cases/lexiscan/06-decks.png" alt="Lexi Scan decks and starter decks" /><figcaption>Decks: starters + your own</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 3. Build -->
+    <section>
+      <p class="kicker">Building it</p>
+      <h2>Designed and built end-to-end, with AI</h2>
+      <p>
+        I'm a product manager, not a full-time mobile engineer, so I paired with AI
+        (Claude) to go from idea to a real, shipping app, choosing the stack, wiring
+        up the AI and the review engine, and iterating screen by screen.
+        <strong>I couldn't have hand-coded this, so the interesting story isn't the
+        syntax, it's the product and design calls I made</strong>: what to build,
+        what to cut, and how each screen should feel. It's a genuine cross-platform
+        native app (Expo / React Native), not a prototype, with a spaced-repetition
+        engine based on the same SM-2 algorithm Anki uses, and all flashcard data
+        stored locally on the device.
+      </p>
+    </section>
+
+    <!-- 4. Iterate -->
+    <section>
+      <p class="kicker">Iterating</p>
+      <h2>Shipping is where the real product questions start</h2>
+      <p>
+        Building surfaced the interesting problems. The biggest was the
+        <strong>bring-your-own-key trade-off</strong>: using each user's own free
+        Gemini key means no subscriptions and no scan limits, but it also adds a
+        setup step most apps don't have. I chose to keep it, because “free with no
+        limits” beats “a smooth start that later charges you” for the daily learner,
+        and I paid it down with an in-app walkthrough that gets the key set up in
+        about two minutes.
+      </p>
+      <p>
+        Real use also surfaced product tensions, and here's how I called them. On
+        <strong>which words to surface</strong>, extracting everything buried the
+        useful words in noise, so I added a CEFR level filter (A1 to C2) and made
+        it default to the learner's level, keeping the deck relevant instead of
+        overwhelming. On <strong>getting started</strong>, a blank deck is a dead
+        end, so I shipped starter decks for Swedish and other languages to give a
+        first review in seconds. My rule for calls like these: protect the fast
+        capture-to-review loop first, add options only when they don't slow it down.
+      </p>
+    </section>
+
+    <!-- 5. Ship -->
+    <section>
+      <p class="kicker">Shipping it</p>
+      <h2>From Expo to the App Store</h2>
+      <p>
+        I packaged and submitted the whole thing myself: wrote the listing copy and
+        keywords, produced the screenshots, set up the privacy policy, and shipped
+        it <strong>free in the Education category, rated 4+</strong>. Privacy is the
+        default, not a feature: flashcards and progress stay on the device, and scans
+        go directly from your phone to Google with your own key, never through a
+        server of mine.
+      </p>
+      <div class="stack" aria-label="Tech stack">
+        <li>Expo</li><li>React Native</li><li>TypeScript</li><li>Gemini API</li><li>SM-2 spaced repetition</li><li>On-device storage</li><li>EAS Build</li>
+      </div>
+    </section>
+
+    <!-- 6. Outcome -->
+    <section>
+      <p class="kicker">Where it stands</p>
+      <h2>Just launched, and now I'm watching it</h2>
+      <p>
+        Lexi Scan is newly on the App Store, so the honest status is: <strong>live,
+        with performance tracking in progress.</strong> I'm treating launch as the
+        start of the experiment, not the finish line, and measuring as real usage
+        comes in.
+      </p>
+      <p>
+        <strong>What I set out to test:</strong> whether one-tap scanning actually
+        gets more words captured than a manual routine, whether learners accept the
+        bring-your-own-key trade-off in exchange for no limits, and whether the CEFR
+        filter keeps decks relevant enough to keep people reviewing.
+      </p>
+      <p>
+        <strong>What I've learned so far:</strong> removing the capture tax is the
+        whole product, the scan-to-card flow is what makes it feel effortless, and
+        the free, no-limits, private positioning resonates more than any single
+        feature. It's also my own daily driver for Swedish, which keeps the feedback
+        loop honest.
+      </p>
+      <p style="margin-top:16px;">
+        <a class="btn btn--primary btn--sm" href="https://apps.apple.com/vn/app/lexi-scan-ai-flashcards-maker/id6785047191" target="_blank" rel="noopener">Try it yourself on the App Store</a>
+      </p>
+    </section>
+
+    <!-- 7. Through-line -->
+    <section>
+      <p class="kicker">Why it matters for the work I do</p>
+      <h2>What this sharpened that I'd bring to a growth team</h2>
+      <p>
+        Building Lexi Scan solo forced me to own the full loop I usually influence as
+        a Growth PM: spotting a real friction point, shaping a first-tap value
+        proposition, ruthlessly protecting one core loop (capture to review), and
+        making a hard onboarding trade-off (the API key) instead of hiding from it.
+        It's the same instinct I bring to onboarding and activation work, just with
+        my hands on every part of it.
+      </p>
+    </section>
+
+    <div class="casepage__cta">
+      <a class="btn btn--soft btn--sm" href="index.html#portfolio">← Back to portfolio</a>
+      <a class="btn btn--primary btn--sm" href="https://apps.apple.com/vn/app/lexi-scan-ai-flashcards-maker/id6785047191" target="_blank" rel="noopener">Try it yourself</a>
+      <a class="btn btn--soft btn--sm" href="mailto:myduyen28ftu2@gmail.com">Get in touch</a>
+    </div>
+  </article>
+
+  <footer class="footer" style="max-width:860px;margin:0 auto;padding-left:24px;padding-right:24px;">
+    <div class="footer__links">
+      <a href="mailto:myduyen28ftu2@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/duyen-dinh-dtmd/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/DuyenDinh" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <span>© 2026 Duyen Dinh · Product Manager, Growth &amp; Onboarding</span>
+  </footer>
+
+</body>
+</html>
