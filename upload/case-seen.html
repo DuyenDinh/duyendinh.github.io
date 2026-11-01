@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seen: a lock-screen app I built and shipped · Duyen Dinh</title>
+  <meta name="description" content="Side project: Seen, a native iOS lock-screen goal app I took from user insight to the App Store, solo, discovery, design, built with AI, iterated, and shipped." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css?v=4" />
+  <style>
+    .gallery5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 14px 0 4px; }
+    .gallery5 figure { margin: 0; }
+    .gallery5 img { width: 100%; border-radius: 14px; box-shadow: var(--shadow-md); display: block; }
+    .gallery5 figcaption { font-size: 12px; font-weight: 600; color: var(--ink-soft); text-align: center; margin-top: 8px; line-height: 1.35; }
+    @media (max-width: 760px) { .gallery5 { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 460px) { .gallery5 { grid-template-columns: repeat(2, 1fr); } }
+    .stack { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin: 8px 0 2px; }
+    .stack li { font-size: 13px; font-weight: 600; color: var(--blue-deep); background: var(--blue-soft); padding: 6px 12px; border-radius: 999px; }
+
+    /* ---- user journey map ---- */
+    .journey { margin: 18px 0 6px; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .journey__grid { display: grid; grid-template-columns: 148px repeat(5, minmax(150px, 1fr)); min-width: 860px; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: #fff; box-shadow: var(--shadow-sm); }
+    .journey__row { display: contents; }
+    .journey__cell { padding: 14px 15px; border-bottom: 1px solid var(--line); border-right: 1px solid var(--line); font-size: 13.5px; line-height: 1.5; color: var(--ink-soft); }
+    .journey__grid > .journey__row:last-child .journey__cell { border-bottom: none; }
+    .journey__cell:nth-child(6n) { border-right: none; }
+    .journey__label { font-weight: 700; font-size: 11.5px; letter-spacing: .04em; text-transform: uppercase; color: var(--blue-deep); background: var(--bg-tint); display: flex; align-items: center; }
+    .journey__phase { font-family: var(--font-head, "Fraunces"), serif; font-weight: 600; font-size: 15px; color: var(--ink); background: var(--blue-soft); text-align: center; justify-content: center; }
+    .journey__emo { font-size: 22px; text-align: center; padding: 10px; }
+    .journey__pain { color: #a23b52; }
+    .journey__win { color: var(--blue-deep); }
+    .journey__hint { font-size: 12.5px; color: var(--ink-soft); margin: 6px 2px 0; font-style: italic; }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== TOP NAV ===================== -->
+  <header class="topnav topnav--sub">
+    <div class="topnav__inner">
+      <a href="index.html#home" class="brand">Duyen<span>Dinh</span></a>
+      <nav class="topnav__links" aria-label="Primary">
+        <a href="index.html#home">Home</a>
+        <a href="index.html#portfolio">Portfolio</a>
+        <a href="index.html#cv">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <article class="casepage">
+    <a class="casepage__back" href="index.html#portfolio">← Back to portfolio</a>
+
+    <div class="tags">
+      <span class="tag">Hobby project</span>
+      <span class="tag">iOS · 0→1</span>
+      <span class="tag">Built with AI</span>
+    </div>
+    <h1 class="casepage__title">Seen: goals on phone lock screen</h1>
+    <p class="casepage__tagline">A hobby project I took from one user insight all the way to the App Store, owning every step: discovery, design, build, and ship.</p>
+    <p class="casepage__context"><strong>Role:</strong> Product, design &amp; build &nbsp;·&nbsp; <strong>Built with:</strong> Claude AI &nbsp;·&nbsp; <strong>Status:</strong> Shipped to the App Store</p>
+
+    <div class="casepage__metrics">
+      <div class="cmetric"><b>Hobby project</b><span>Discovery to App Store, nights and weekends</span></div>
+      <div class="cmetric"><b>Built with AI</b><span>Designed and coded end-to-end with Claude</span></div>
+      <div class="cmetric"><b>Free &amp; private</b><span>No paywall, no ads, no account, nothing uploaded</span></div>
+    </div>
+
+    <!-- 1. Insight -->
+    <section>
+      <p class="kicker">The insight</p>
+      <h2>You look at your phone 100+ times a day</h2>
+      <p>
+        Every productivity app fights the same losing battle: a reminder you have
+        to open is a reminder you ignore. Meanwhile the one screen you actually see
+        dozens of times a day, your lock screen, sits empty. That's the idea
+        behind Seen: <strong>what gets seen gets done.</strong> Put your goals,
+        streaks, and your one thing for today where you already look, and they
+        re-focus you all day long without you opening a thing.
+      </p>
+      <p>
+        <strong>Who it's for:</strong> busy people who plan their day in the
+        morning and lose the thread by lunch. The opening I bet on was a product
+        built on the opposite values to what's out there: goal-first instead of
+        calendar-cram, and genuinely free and private instead of paywalling the
+        customization people actually want.
+      </p>
+    </section>
+
+    <!-- 1b. User journey map -->
+    <section>
+      <p class="kicker">The user journey</p>
+      <h2>Mapping a normal day, and where the plan falls apart</h2>
+      <p>
+        This map is a <strong>persona I built, not field research</strong>. I
+        sketched one ordinary day for the person I was designing for: someone who
+        likes seeing their day on their lock screen so it quietly reminds them what
+        they need to do. To sanity-check it I talked to a handful of people online
+        and saw genuine interest on Threads, enough of a signal to justify building.
+        The map made the gap obvious, the drop-off is never at planning, it is in
+        the <strong>hours in between</strong>, exactly where the lock screen lives.
+      </p>
+
+      <div class="journey">
+        <div class="journey__grid">
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Stage</div>
+            <div class="journey__cell journey__phase">Wake up</div>
+            <div class="journey__cell journey__phase">Plan the day</div>
+            <div class="journey__cell journey__phase">Get pulled away</div>
+            <div class="journey__cell journey__phase">Glance at phone</div>
+            <div class="journey__cell journey__phase">Wind down</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Doing</div>
+            <div class="journey__cell">Grabs phone, scrolls before getting up.</div>
+            <div class="journey__cell">Picks the one goal that actually matters today.</div>
+            <div class="journey__cell">Meetings, messages, errands take over.</div>
+            <div class="journey__cell">Unlocks the phone 100+ times without thinking.</div>
+            <div class="journey__cell">Reflects on whether the day counted.</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Thinking</div>
+            <div class="journey__cell">“Today I’ll finally make progress.”</div>
+            <div class="journey__cell">“This is the thing I can’t skip.”</div>
+            <div class="journey__cell">“I’ll get back to it in a minute.”</div>
+            <div class="journey__cell">“Wait, what was I focused on again?”</div>
+            <div class="journey__cell">“Where did the day even go?”</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Feeling</div>
+            <div class="journey__cell journey__emo" title="Hopeful">😌</div>
+            <div class="journey__cell journey__emo" title="Motivated">💪</div>
+            <div class="journey__cell journey__emo" title="Distracted">😵‍💫</div>
+            <div class="journey__cell journey__emo" title="Disconnected">😐</div>
+            <div class="journey__cell journey__emo" title="Deflated">😞</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">Pain point</div>
+            <div class="journey__cell journey__pain">Good intention has nowhere to live.</div>
+            <div class="journey__cell journey__pain">The goal is saved inside an app she won’t reopen.</div>
+            <div class="journey__cell journey__pain">Nothing pulls attention back to what mattered.</div>
+            <div class="journey__cell journey__pain">The one screen she sees most is empty.</div>
+            <div class="journey__cell journey__pain">No visible signal of progress or streak.</div>
+          </div>
+          <div class="journey__row">
+            <div class="journey__cell journey__label">How Seen helps</div>
+            <div class="journey__cell journey__win">First glance already shows today’s one thing.</div>
+            <div class="journey__cell journey__win">Plan becomes a full-screen wallpaper, not a buried note.</div>
+            <div class="journey__cell journey__win">Every unlock is a silent re-focus.</div>
+            <div class="journey__cell journey__win">Goal, countdown and streak sit where she already looks.</div>
+            <div class="journey__cell journey__win">Streak stays visible, progress feels earned.</div>
+          </div>
+        </div>
+      </div>
+      <p class="journey__hint">Scroll the map sideways on mobile · emotions run hopeful → deflated exactly in the gap Seen fills.</p>
+
+      <p>
+        Reading the map top to bottom, the insight writes itself: the emotional low
+        is not a motivation problem, it is a <strong>visibility problem</strong>. So
+        Seen does not try to add another planning ritual, it moves the plan she
+        already made onto the surface she cannot avoid.
+      </p>
+    </section>
+
+    <!-- 2. Bet -->
+    <section>
+      <p class="kicker">The bet</p>
+      <h2>A full-screen wallpaper, not a tiny widget</h2>
+      <p>
+        The core product decision: don't ship another small widget hiding in a
+        corner. Seen generates a <strong>bold, full-screen wallpaper</strong> from
+        your plan, your one thing, a goal countdown, streaks, and your day's
+        schedule, impossible to miss the moment you pick up your phone. Free, on
+        your device, no account.
+      </p>
+      <div class="gallery5">
+        <figure><img src="assets/img/cases/seen/1-lockscreen.png" alt="Seen lock screen showing goals and schedule" /><figcaption>Lock screen: goals + day</figcaption></figure>
+        <figure><img src="assets/img/cases/seen/2-countdown.png" alt="Seen goal countdown on the lock screen" /><figcaption>Goal countdown</figcaption></figure>
+        <figure><img src="assets/img/cases/seen/3-today.png" alt="Seen Today view with one thing" /><figcaption>Today: your one thing</figcaption></figure>
+        <figure><img src="assets/img/cases/seen/4-calendar.png" alt="Seen calendar day planner" /><figcaption>Day planner</figcaption></figure>
+        <figure><img src="assets/img/cases/seen/5-wallpaper.png" alt="Seen wallpaper studio" /><figcaption>Wallpaper studio</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- 3. Build -->
+    <section>
+      <p class="kicker">Building it</p>
+      <h2>Designed and built end-to-end, with AI</h2>
+      <p>
+        I'm a product manager, not a full-time iOS engineer, so I paired with AI
+        (Claude) to go from idea to a real, shipping app, designing the
+        architecture, writing the Swift, and iterating screen by screen.
+        <strong>I couldn't have hand-coded this, so the interesting story isn't the
+        syntax, it's the product and design calls I made</strong>: what to build,
+        what to cut, and how each screen should feel. It is a genuine native app,
+        not a prototype.
+      </p>
+    </section>
+
+    <!-- 4. Iterate -->
+    <section>
+      <p class="kicker">Iterating</p>
+      <h2>Shipping is where the real product questions start</h2>
+      <p>
+        Building surfaced the interesting problems. iOS Shortcuts' "Set Wallpaper"
+        action has Apple-side bugs, so chasing a perfect auto-wallpaper was a trap.
+        I re-framed the advantage around <strong>reliability instead of magic</strong>:
+        widget-first (widgets always update), plus a health check that detects a
+        stale wallpaper and nudges the user to refresh.
+      </p>
+      <p>
+        Real use also surfaced product tensions, and here's how I called them. On
+        whether a single "one thing" felt too rigid, I kept the one thing as the
+        hero for focus but gave it room for a short supporting list, so the default
+        stays sharp without punishing busy days. On whether reminders should be
+        scoped to a day, I chose <strong>day-scoped by default</strong> to match how
+        people actually plan, with anything longer living as a goal countdown
+        instead. My rule for calls like these: protect the one clear signal on the
+        lock screen first, add flexibility only when it doesn't blur that.
+      </p>
+    </section>
+
+    <!-- 5. Ship -->
+    <section>
+      <p class="kicker">Shipping it</p>
+      <h2>From Xcode to the App Store</h2>
+      <p>
+        I packaged and submitted the whole thing myself: wrote the listing copy and
+        keywords, generated the app icon in code, produced the screenshots, and set
+        the App Privacy label to <strong>"Data Not Collected"</strong>, which is
+        simply true, because Seen makes no network calls at all. Productivity
+        category, free, 4+, private by design.
+      </p>
+      <div class="stack" aria-label="Tech stack">
+        <li>SwiftUI</li><li>WidgetKit</li><li>SwiftData</li><li>App Intents / Shortcuts</li><li>EventKit</li><li>ImageRenderer</li><li>Xcode</li>
+      </div>
+    </section>
+
+    <!-- 6. Outcome -->
+    <section>
+      <p class="kicker">Where it stands</p>
+      <h2>Just launched, and now I'm watching it</h2>
+      <p>
+        Seen is newly on the App Store, so the honest status is: <strong>live, with
+        performance tracking in progress.</strong> I'm treating launch as the start
+        of the experiment, not the finish line, and measuring as real usage comes in.
+      </p>
+      <p>
+        <strong>What I set out to test:</strong> whether putting goals on the lock
+        screen actually changes behaviour, whether people accept the one-tap
+        Shortcut trade-off to set a wallpaper, and whether "one thing" beats a full
+        to-do list for daily focus.
+      </p>
+      <p>
+        <strong>What I've learned so far:</strong> the reliability-first framing has
+        held up, widgets that always update beat a "magical" auto-wallpaper that
+        sometimes doesn't, and the free-and-private positioning resonates more than
+        any single feature.
+      </p>
+      <p style="margin-top:16px;">
+        <span class="btn btn--soft btn--sm" style="cursor:default;">On the App Store</span>
+      </p>
+    </section>
+
+    <!-- 7. Through-line -->
+    <section>
+      <p class="kicker">Why it matters for the work I do</p>
+      <h2>What this sharpened that I'd bring to a growth team</h2>
+      <p>
+        Building Seen solo forced me to own the full loop I usually influence as a
+        Growth PM: a sharp insight, a first-glance value proposition, ruthless
+        scoping toward one clear signal, and a reliability-first activation moment
+        (the one-tap setup). It's the same instinct I bring to onboarding and
+        activation work, just with my hands on every part of it.
+      </p>
+    </section>
+
+    <div class="casepage__cta">
+      <a class="btn btn--soft btn--sm" href="index.html#portfolio">← Back to portfolio</a>
+      <span class="btn btn--soft btn--sm" style="cursor:default;">On the App Store</span>
+      <a class="btn btn--soft btn--sm" href="mailto:myduyen28ftu2@gmail.com">Get in touch</a>
+    </div>
+  </article>
+
+  <footer class="footer" style="max-width:860px;margin:0 auto;padding-left:24px;padding-right:24px;">
+    <div class="footer__links">
+      <a href="mailto:myduyen28ftu2@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/duyen-dinh-dtmd/" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://github.com/DuyenDinh" target="_blank" rel="noopener">GitHub</a>
+    </div>
+    <span>© 2026 Duyen Dinh · Product Manager, Growth &amp; Onboarding</span>
+  </footer>
+
+</body>
+</html>
