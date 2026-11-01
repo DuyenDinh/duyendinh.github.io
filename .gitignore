@@ -8,3 +8,6 @@ assets/Push notifications/
 assets/Onboarding registration/
 assets/tutorial/
 assets/upgrade/
+
+# local editor/session config
+.claude/
